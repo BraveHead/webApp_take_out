@@ -1,0 +1,527 @@
+/*点菜界面的头部返回，收藏和分享*/
+body{
+    background-color: rgb(255,193,60);
+    overflow-y:auto;
+}
+.order_food_header{
+    width: 100%;
+    background-color: rgb(255,193,60);
+    position: fixed;
+    /*left: 0.3rem;*/
+    z-index: 5;
+}
+.order_header_nav{
+    width: 6.9rem;
+    height: 0.89rem;
+    margin: 0 auto;
+    position: relative;
+}
+.order_back{
+    position: absolute;
+    top: 0.22rem;
+    width: 0.2rem;
+}
+.order_collection{
+    position: absolute;
+    top:0.25rem;
+    width: 0.36rem;
+    left: 5.8rem;
+}
+.order_share{
+    width: 0.32rem;
+    position: absolute;
+    top: 0.23rem;
+    right: 0;
+}
+
+/*点菜头部的商家头像和优惠活动展示*/
+.order_container{
+    width: 100%;
+    background-color: rgb(241,241,241);
+    position: relative;
+    top: 0.89rem;
+}
+.order_header_message_container{
+    width: 100%;
+    background-color: rgb(255,193,60);
+    overflow: hidden;
+}
+.order_header_message{
+    margin: 0 auto;
+    height: 1.35rem;
+    width: 6.9rem;
+}
+    /*左边图像*/
+    .order_header_message_left{
+        float: left;
+        height: 1.23rem;
+        width: 1.32rem;
+    }
+    .order_header_message_left>img{
+        width: 1.14rem;
+    }
+    /*右边文字*/
+    .order_header_message_right{
+        float: left;
+        width: 5.58rem;
+    }
+    .order_message_name{
+        width: 100%;
+        height: 0.29rem;
+        font-size:0.28rem;
+        font-weight: bolder;
+        color: rgb(253,253,253);
+    }
+    .order_message_type{
+        width: 100%;
+        height: 0.6rem;
+        font-size:0.26rem;
+        text-align: left;
+        color: rgb(253,253,253);
+        line-height: 0.6rem;
+    }
+    .order_message_safe{
+        width: 100%;
+        height: 0.38rem;
+        position: relative;
+    }
+    .safe_logo{
+        width: 0.24rem;
+        vertical-align: middle;
+    }
+    .safe_message{
+        font-size: 0.22rem;
+        vertical-align: middle;
+        color: rgb(253,253,253);
+        width: 3.5rem;
+        overflow: hidden;
+    }
+    .safe_more{
+        /*position: absolute;*/
+        /*right: 0;*/
+        margin-left: 0.3rem;
+        color: rgb(253,253,253);
+        font-size: 0.22rem;
+        vertical-align: middle;
+    }
+    .safe_more:hover{
+        cursor: pointer;
+    }
+    .safe_more>img{
+        vertical-align: middle;
+        width: 0.15rem;
+    }
+    .order_message_safe_hidden{
+        display: none;
+    }
+    .order_message_safe_hidden>p{
+        font-size:0.22rem;
+        margin-left: 0.36rem;
+        color: rgb(253,253,253);
+    }
+
+/*滚动文字的区域*/
+.scroll_text{
+    width: 100%;
+    height: 0.68rem;
+    background-color: rgb(255,247,220);
+    margin-bottom: 0.2rem;
+}
+.scroll_text_container{
+    width: 6.9rem;
+    margin: 0 auto;
+    position: relative;
+}
+.scroll_text_container>img{
+    position: absolute;
+    left: 0;
+    top: 0.18rem;
+    width: 0.3rem;
+}
+marquee{
+    position: absolute;
+    left: 0.4rem;
+    top: 0.18rem;
+    color: rgb(60,60,60);
+    font-weight: bold;
+}
+
+/*商家模块的切换*/
+
+.food_list_container{
+    width: 100%;
+    background-color: #fff;
+    overflow-y: hidden;
+}
+.business_module_container{
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    /*flex-direction:column;*/
+    height: 0.83rem;
+}
+.business_module_container>a{
+    color: rgb(190,190,190);
+}
+
+.module_list_default {
+    padding: 0.11rem 0.02rem;
+    border-bottom: 0.04rem solid #ffffff;
+    position: relative;
+    top: 0.2rem;
+}
+.showBottomRed{
+    border-bottom: 4px solid rgb(229,35,63);
+    color: black;
+}
+    /*模块的内容列表*/
+    .swiper-container{
+        width: 100%;
+        overflow: hidden;
+        /*height: 9.0rem;*/
+        margin-top: 0.01rem
+    }
+    .food_type_list_container{
+        overflow-y: auto;
+        width: 1.78rem;
+        float: left;
+        background-color: rgb(241,241,241);
+    }
+    .food_type_list_container>ul{
+        overflow-y: auto;
+    }
+    .food_type_list_item{
+        display: block;
+        width: 100%;
+        height: 0.9rem;
+        line-height: 0.9rem;
+    }
+    .food_type_list_item>p{
+        margin-left: 0.3rem;
+    }
+    .showFoodListWhite{
+        background-color: #fff;
+    }
+
+
+
+    /*各type下的商品种类*/
+
+    .food_list_item_container{
+        display: block;
+        width:5.22rem;
+        float: left;
+        margin-left: 0.2rem;
+        background-color: #ffffff;
+        /*height: 9.0rem;*/
+    }
+    .food_list_item_container>ul{
+        height: 9.0rem;
+        overflow-y: auto;
+        position: relative;
+
+    }
+    .food_list_item{
+        width: 100%;
+    }
+    .food_list_item_typeName{
+        width: 100%;
+        height: 0.67rem;
+        border-bottom: 1px dashed darkgray;
+        line-height:0.67rem;
+    }
+    .food_list_item_typeName>span{
+        margin-left: 0.14rem;
+    }
+    .food_list_item_foodName{
+        width: 100%;
+        height: 1.2rem;
+        padding: 0.2rem 0;
+    }
+    .foodName_left{
+        float: left;
+        width: 1.2rem;
+    }
+    .foodName_right{
+        float: left;
+        margin-left: 0.2rem;
+        width:3.82rem ;
+    }
+    .foodName_right_message{
+        font-size: 0.28rem;
+        font-weight: bold;
+        overflow: hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+        height: 0.46rem;
+        line-height: 0.46rem;
+    }
+    .foodName_right_add{
+        width: 100%;
+        height: 0.74rem;
+        position: relative;
+    }
+    .now_peace{
+        vertical-align: middle;
+        color: rgb(225,39,63);
+        font-size: 0.34rem;
+        font-weight: bolder;
+    }
+    .order_peace{
+        vertical-align: middle;
+        color: darkgray;
+        margin-left: 0.14rem;
+        font-size: 0.24rem;
+        text-decoration: line-through;
+    }
+    .reduce{
+        vertical-align: middle;
+        width: 0.5rem;
+        margin-left: 1.18rem;
+    }
+    .now_count{
+        vertical-align: middle;
+        color: rgb(60,60,60);
+
+    }
+    .add_count{
+        vertical-align: middle;
+        width: 0.5rem;
+    }
+    .right_add_container{
+        position: absolute;
+        top: 0.24rem;
+    }
+
+
+
+
+
+
+/*评价*/
+.evaluate_background{
+    width: 100%;
+    height: 1.5rem;
+    background-image: url('../Pictures/Pic/evaluate/evaluate_background.png');
+    background-size: 7.5rem 1.5rem;
+    background-repeat: no-repeat;
+    border-bottom: 0.2rem solid rgb(241,241,241);
+}
+.evaluate_background>div{
+    width: 2.06rem;
+    position: relative;
+    top:0.16rem;
+    margin: 0 auto;
+}
+.evaluate_sort{
+    width: 100%;
+    height: 0.76rem;
+    background-image: url('../Pictures/Pic/evaluate/sort_background.png');
+    background-size: 1.56rem 0.74rem;
+    background-position: center;
+    text-align: center;
+}
+.evaluate_sort>b{
+    font-size: 0.4rem;
+    color: #ffffff;
+    line-height: 0.76rem;
+}
+.evaluate_sort>span{
+    font-size: 0.24rem;
+    color: #ffffff;
+    line-height: 0.76rem;
+}
+.evaluate_number{
+    width: 100%;
+    height: 0.32rem;
+    background-color: rgb(255,87,87);
+    text-align: center;
+    line-height: 0.32rem;
+    color: #ffffff;
+    font-size: 0.2rem;
+    border-radius: 0.12rem;
+}
+    /*选择评价类型*/
+    .choice_evaluate{
+        width: 100%;
+        height:0.79rem;
+        border-bottom: 1px solid rgb(241,241,241);
+    }
+    .choice_evaluate_container{
+        width: 6.9rem;
+        margin: 0 auto;
+    }
+    .choice_evaluate_container>img{
+        width: 0.3rem;
+        vertical-align: middle;
+        line-height: 0.79rem;
+    }
+    .choice_evaluate_container>span{
+        vertical-align: middle;
+        line-height: 0.79rem;
+        color: rgb(190,190,190);
+    }
+
+    /*评价内容*/
+    .evaluate_content{
+        width: 100%;
+        border-bottom: 1px solid rgb(241,241,241);
+        overflow-y: auto;
+    }
+    .evaluate_content_container{
+        width: 6.9rem;
+        margin: 0 auto;
+    }
+    .evaluate_context_left{
+        float: left;
+        width: 1.0rem;
+    }
+    .evaluate_context_left>img{
+        width: 0.8rem;
+        position: relative;
+        top: 0.2rem;
+    }
+    .evaluate_context_right{
+        float: left;
+        width: 5.9rem;
+        padding: 0.2rem 0;
+    }
+    .customer_id{
+        position: relative;
+    }
+
+    .customer_id>b{
+        width: 100%;
+        font-size: 0.26rem;
+        color: rgb(75,118,157);
+        position: absolute;
+        left: 0;
+    }
+    .customer_id>span,.customer_id>time{
+        position: absolute;
+        right: 0;
+        color: rgb(119,119,119);
+    }
+    .customer_id>span>img{
+        width: 0.26rem;
+    }
+    .context_message{
+        width: 100%;
+        margin-top: 0.66rem;
+    }
+    .context_message>span{
+
+        font-size: 0.26rem;
+        color: rgb(86,86,86);
+
+    }
+    .context_message>time{
+        display: block;
+        font-size: 0.2rem;
+        color: rgb(119,119,119);
+        padding: 0.3rem 0;
+    }
+    /*商家回复*/
+    .evaluate_context{
+        margin-left: 1.0rem;
+    }
+    .business_evaluate_left{
+        width: 0.86rem;
+    }
+    .business_evaluate_left>img{
+        width: 0.66rem;
+    }
+    .business_evaluate_right{
+        width: 5.04rem;
+    }
+
+/*店铺详情*/
+.business_content{
+    width: 100%;
+    background-color: rgb(241,241,241);
+
+}
+    .business_center_logo_container{
+        width: 7.5rem;
+        height: 1.75rem;
+        border-top: 1px solid rgb(119,119,119);
+    }
+    .business_center_logo{
+        width: 6.9rem;
+        height: 1.75rem;
+    }
+    .logo_message{
+        display: block;
+        width: 3.8rem;
+        height: 0.8rem;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 0.36rem;
+        text-align: center;
+        line-height: 0.8rem;
+        position: relative;
+        top: 0.22rem;
+        border: 1px solid rgba(119,119,119,0.5);
+    }
+    .logo_message>img{
+        width: 0.6rem;
+        vertical-align: middle;
+    }
+    .logo_message>span{
+        color: rgb(60,60,60);
+        font-size: 0.30rem;
+        font-weight:bolder;
+        vertical-align: middle;
+    }
+    .describe_logo{
+        font-size: 0.26rem;
+        text-align: center;
+        position: relative;
+        top: 0.4rem;
+        font-weight: bold;
+        color: rgb(60,60,60);
+    }
+
+    /*地址，联系方式等等的共同样式*/
+    .same_type_container{
+        width: 7.5rem;
+        height: 0.85rem;
+        border-bottom: 1px solid rgb(241,241,241);
+        background-color: #fff;
+    }
+    .same_type{
+        width: 6.9rem;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .same_type>p {
+        width: 100%;
+        display: inline-block;
+        padding: 0.245rem 0;
+    }
+    .same_type>p>span{
+        vertical-align: middle;
+        font-size: 0.30rem;
+    }
+    .phone_number{
+        height: 0.36rem;
+        vertical-align: middle;
+    }
+    .point{
+        height: 0.36rem;
+        vertical-align: middle;
+        float: right;
+        font-weight: bold;
+    }
+    .dif_type_container{
+        border-bottom: 0.14rem solid rgb(241,241,241);
+    }
+
+
+
+
+
+
+
+
+
+

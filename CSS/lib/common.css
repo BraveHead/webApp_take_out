@@ -1,0 +1,49 @@
+/*共有的样式*/
+
+
+html,body{}
+
+*{
+    margin: 0 auto;
+    padding: 0;
+    text-decoration: none;
+}
+
+body{
+    font-size: 0.28rem;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+.back{
+    position: absolute;
+    top:0.1rem;
+    left: 0;
+}
+.back>img{
+    width: 0.18rem;
+}
+
+.selection_mode_now{
+    color: white;
+    background-color: rgb(255,193,60);
+}
+.clear{
+    clear: both;
+}
+.border_bottom_gray{
+    border-bottom: 1px solid rgb(215,215,215);
+}
+ul li{
+    list-style-type: none;
+}
+
+
+

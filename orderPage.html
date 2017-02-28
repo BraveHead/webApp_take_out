@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable='no'">
+    <title>商家点菜界面</title>
+    <link rel="stylesheet" href="CSS/lib/common.css"/>
+    <link rel="stylesheet" href="CSS/orderPage.css" type="text/css"/>
+    <link rel="stylesheet" href="CSS/lib/swiper-3.4.1.min.css"/>
+    <script src="JS/lib/autoSetRem.js"></script>
+
+</head>
+<body>
+<header class="order_food_header">
+    <div class="order_header_nav">
+        <img src="Pictures/Pic/header_icon/back.png" class="order_back"/>
+        <img src="Pictures/Pic/header_icon/collection.png" class="order_collection"/>
+        <img src="Pictures/Pic/header_icon/share.png" class="order_share"/>
+    </div>
+</header>
+<div class="order_container">
+    <div class="order_header_message_container">
+        <div class="order_header_message">
+            <div class="order_header_message_left">
+                <img src="Pictures/Pic/click_food/business_header_pic.png"/>
+            </div>
+            <div class="order_header_message_right">
+                <div class="order_message_name">满减特约-蜀香坊-City</div>
+                <div class="order_message_type">中餐，西餐，四川，日餐，韩餐，冰激凌</div>
+                <div class='order_message_safe'>
+                    <img src="Pictures/Pic/click_food/full_cut.png" class="safe_logo"/>
+                    <span class="safe_message">满30减25， 满60减55， 满90减70</span>
+                    <span class="safe_more">2个活动 <img src="Pictures/Pic/click_food/safe_down.png"/></span>
+                </div>
+                <div class="order_message_safe_hidden">
+                    <p>新用户第一次下单立减20</p>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <!--滚动广播-->
+    <div class="scroll_text">
+        <div class="scroll_text_container">
+            <img src="Pictures/Pic/click_food/advertisement.png"/>
+            <marquee>下大雨了，帅的司机都没了，为了你们的幸福，不开店了！</marquee>
+        </div>
+    </div>
+    <!--商家模块的切换-->
+    <div class="food_list_container">
+        <div class="business_module_container" id="contrast">
+            <a href="#" class="module_list"><span class="showBottomRed  module_list_default">点菜</span></a>
+            <a href="#" class="module_list"><span class="module_list_default">评价</span></a>
+            <a href="#" class="module_list"><span class="module_list_default">商家</span></a>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!--点菜-->
+                <div class="swiper-slide">
+                    <div class="food_type_list_container">
+                        <ul>
+                            <li class="food_type_list_item showFoodListWhite" ><p>热销</p></li>
+                            <li class="food_type_list_item" ><p>精选组合</p></li>
+                            <li class="food_type_list_item" ><p>饭类</p></li>
+                            <li class="food_type_list_item"><p>面类</p></li>
+                            <li class="food_type_list_item"><p>小吃</p></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="food_list_item_container">
+                        <ul >
+                            <li class="food_list_item" id="#id1">
+                                <p class="food_list_item_typeName" ><span>热销</span></p>
+                                <div class="food_list_item_foodName">
+                                    <img src="Pictures/Pic/click_food/no_loading.png" class="foodName_left"/>
+                                    <div class="foodName_right">
+                                        <div class="foodName_right_message">神田川牛肉里面好多好多的肉肉肉呀呀呀压抑</div>
+                                        <div class="foodName_right_add">
+                                            <div class="right_add_container">
+                                                <span class="now_peace">$25</span><del class="order_peace">$30</del>
+                                                <img src="Pictures/Pic/click_food/reduce.png" class="reduce"/>
+                                                <span class="now_count">3</span>
+                                                <img src="Pictures/Pic/click_food/add.png" class="add_count"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </div>
+                                <div class="food_list_item_foodName">
+                                    <img src="Pictures/Pic/click_food/no_loading.png" class="foodName_left"/>
+                                    <div class="foodName_right">
+                                        <div class="foodName_right_message">神田川牛肉里面好多好多的肉肉肉呀呀呀压抑</div>
+                                        <div class="foodName_right_add">
+                                            <div class="right_add_container">
+                                                <span class="now_peace">$25</span><del class="order_peace">$30</del>
+                                                <img src="Pictures/Pic/click_food/reduce.png" class="reduce"/>
+                                                <span class="now_count">3</span>
+                                                <img src="Pictures/Pic/click_food/add.png" class="add_count"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="food_list_item" id="#id2">
+                                <p class="food_list_item_typeName" >精选组合</p>
+                                <div class="food_list_item_foodName">
+                                    <img src="Pictures/Pic/click_food/no_loading.png" class="foodName_left"/>
+                                    <div class="foodName_right">
+                                        <div class="foodName_right_message">神田川牛肉里面好多好多的肉肉肉呀呀呀压抑</div>
+                                        <div class="foodName_right_add">
+                                            <div class="right_add_container">
+                                                <span class="now_peace">$25</span><del class="order_peace">$30</del>
+                                                <img src="Pictures/Pic/click_food/reduce.png" class="reduce"/>
+                                                <span class="now_count">3</span>
+                                                <img src="Pictures/Pic/click_food/add.png" class="add_count"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </div>
+                                <div class="food_list_item_foodName">
+                                    <img src="Pictures/Pic/click_food/no_loading.png" class="foodName_left"/>
+                                    <div class="foodName_right">
+                                        <div class="foodName_right_message">神田川牛肉里面好多好多的肉肉肉呀呀呀压抑</div>
+                                        <div class="foodName_right_add">
+                                            <div class="right_add_container">
+                                                <span class="now_peace">$25</span><del class="order_peace">$30</del>
+                                                <img src="Pictures/Pic/click_food/reduce.png" class="reduce"/>
+                                                <span class="now_count">3</span>
+                                                <img src="Pictures/Pic/click_food/add.png" class="add_count"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clear">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="food_list_item" id="#id3">
+                                <p class="food_list_item_typeName" >饭类</p>
+                                <div class="food_list_item_foodName">
+                                    热销的产品
+                                </div>
+                            </li>
+                            <li class="food_list_item" id="#id4">
+                                <p class="food_list_item_typeName">面类</p>
+                                <div class="food_list_item_foodName">
+                                    热销的产品
+                                </div>
+                            </li>
+                            <li class="food_list_item" id="#id5">
+                                <p class="food_list_item_typeName">小吃</p>
+                                <div class="food_list_item_foodName">
+                                    热销的产品
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <!--评价-->
+                <div class="swiper-slide">
+                    <div class="evaluate_background">
+                        <div>
+                            <div class="evaluate_sort"><b>4</b><span>.5</span></div>
+                            <p class="evaluate_number">1174外卖用户评价</p>
+                        </div>
+                    </div>
+                    <div class="choice_evaluate">
+                        <div class="choice_evaluate_container">
+                            <img src="Pictures/Pic/evaluate/no_choice.png"/>
+                            <span>只显示有文字评论的内容</span>
+                        </div>
+                    </div>
+                    <div class="evaluate_content">
+                        <!--用户评价-->
+                        <div class="evaluate_content_container">
+                            <div class="evaluate_context_left">
+                                <img src="Pictures/Pic/evaluate/header_pic.png"/>
+                            </div>
+                            <div class="evaluate_context_right">
+                                <div class="customer_id">
+                                    <b>不是乌贝拉</b>
+                                    <span>
+                                        <img src="Pictures/Pic/evaluate/yellow_star.png"/><img src="Pictures/Pic/evaluate/yellow_star.png"/><img src="Pictures/Pic/evaluate/yellow_star.png"/><img src="Pictures/Pic/evaluate/gray_star.png"/><img src="Pictures/Pic/evaluate/gray_star.png"/>
+                                    </span>
+                                </div>
+                                <div class="context_message">
+                                    <span>
+                                        不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉
+                                        不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉,
+                                        不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉
+                                        不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉
+                                        不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉
+                                    </span>
+                                    <time>2017-01-08 08:50</time>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <!--商家回复-->
+                        <div class="evaluate_content_container">
+                            <div class="evaluate_context">
+                                <div class="evaluate_context_left business_evaluate_left">
+                                    <img src="Pictures/Pic/evaluate/header_pic.png"/>
+                                </div>
+                                <div class="evaluate_context_right business_evaluate_right">
+                                    <div class="customer_id">
+                                        <b>不是乌贝拉</b>
+                                        <time>2017-01-08 08:50</time>
+                                    </div>
+                                    <div class="context_message">
+                                    <span>
+                                        不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉
+                                        不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉,
+                                        不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉
+                                        不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉
+                                    </span>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <!--商家详情-->
+                <div class="swiper-slide">
+                    <div class="business_content">
+                        <!--logo-->
+                        <div class="business_center_logo_container">
+                            <div class="business_center_logo">
+                                <a class="logo_message">
+                                    <img src="Pictures/Pic/business_pic/logo_message.png"/>
+                                    <span>查看店铺详情</span>
+                                </a>
+                                <p class="describe_logo">-进入店铺详情可查看更多的到店点评-</p>
+                            </div>
+                        </div>
+                        <!--phone-->
+                        <div class="same_type_container">
+                            <div class="same_type">
+                                <p>
+                                    <img src="Pictures/Pic/business_pic/phone_number.png" class="phone_number"/>
+                                    <span>1322 120 332</span>
+                                    <img src="Pictures/Pic/business_pic/point.png" class="point"/>
+                                </p>
+                            </div>
+                        </div>
+                        <!--地址-->
+                        <div class="same_type_container dif_type_container">
+                            <div class="same_type">
+                                <p>
+                                    <img src="Pictures/Pic/business_pic/adress.png" class="phone_number"/>
+                                    <span>6/123 Muriel Ave, Moorooka QLD 4105 </span>
+                                    <img src="Pictures/Pic/business_pic/point.png" class="point"/>
+                                </p>
+                            </div>
+                        </div>
+                        <!--配送时间-->
+                        <div class="same_type_container dif_type_container">
+                            <div class="same_type">
+                                <p>
+                                    <img src="Pictures/Pic/business_pic/distribution.png" class="phone_number"/>
+                                    <span>配送时间: 08:00-22:00</span>
+                                    <img src="Pictures/Pic/business_pic/point.png" class="point"/>
+                                </p>
+                            </div>
+                        </div>
+                        <!--营业时间-->
+                        <div class="same_type_container dif_type_container">
+                            <div class="same_type">
+                                <p>
+                                    <img src="Pictures/Pic/business_pic/do_business.png" class="phone_number"/>
+                                    <span>营业时间: 08:00-22:30</span>
+                                    <img src="Pictures/Pic/business_pic/point.png" class="point"/>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!--商家优惠信息-->
+                        <div class="business_sale_message_container">
+                            <div class="business_sale_message">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="JS/lib/jquery.js"></script>
+<script src="JS/lib/jquery.scrollTo.js"></script>
+<script src="JS/lib/swiper-3.4.1.jquery.min.js"></script>
+<script src="JS/orderPage.js"></script>
+</html>
