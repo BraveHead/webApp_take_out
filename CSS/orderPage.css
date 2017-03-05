@@ -1,15 +1,75 @@
 /*点菜界面的头部返回，收藏和分享*/
 body{
     background-color: rgb(255,193,60);
-    overflow-y:auto;
+    overflow: hidden;
 }
+.new{
+    width: 100%;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
 .order_food_header{
     width: 100%;
     background-color: rgb(255,193,60);
     position: fixed;
-    /*left: 0.3rem;*/
     z-index: 5;
 }
+    /*头部滚动的切换效果*/
+.headerTransform{
+    animation: headerChangeColor 2s forwards;
+}
+@keyframes headerChangeColor {
+    0%{
+        background-color: rgb(255,193,60);
+    }
+    100%{
+        background-color: #ffffff;
+    }
+}
+@-moz-keyframes headerChangeColor {
+    from{
+        background-color: rgb(255,193,60);
+    }
+    to{
+        background-color: rgb(255,0,0);
+    }
+}
+
+.showTransformHidden{
+    animation: showToHidden 2s forwards;
+}
+@keyframes showToHidden {
+    from{
+        height: 1.35rem;
+    }
+    to{
+        height: 0;
+    }
+}
+
+/*.showTransformShow{
+    animation: hiddenToShow 2s forwards;
+}
+@keyframes hiddenToShow {
+    from{
+        height: 0;
+    }
+    to{
+        height: 1.35rem;
+    }
+}
+@-moz-keyframes hiddenToShow {
+    from{
+        height: 0;
+    }
+    to{
+        height: 1.35rem;
+    }
+}*/
+
 .order_header_nav{
     width: 6.9rem;
     height: 0.89rem;
@@ -21,10 +81,19 @@ body{
     top: 0.22rem;
     width: 0.2rem;
 }
+.businessItemName{
+    position: absolute;
+    top: 0.4rem;
+    font-size: 0.28rem;
+    font-weight: bolder;
+    color: #ffffff;
+    left: 3rem;
+    display: none;
+}
 .order_collection{
     position: absolute;
     top:0.25rem;
-    width: 0.36rem;
+    height: 0.64rem;
     left: 5.8rem;
 }
 .order_share{
@@ -39,12 +108,15 @@ body{
     width: 100%;
     background-color: rgb(241,241,241);
     position: relative;
+    /*top: 0.89rem;*/
     top: 0.89rem;
+    overflow-y: hidden;
 }
 .order_header_message_container{
     width: 100%;
     background-color: rgb(255,193,60);
     overflow: hidden;
+    display: block;
 }
 .order_header_message{
     margin: 0 auto;
@@ -178,7 +250,8 @@ marquee{
         width: 100%;
         overflow: hidden;
         /*height: 9.0rem;*/
-        margin-top: 0.01rem
+        margin-top: 0.01rem;
+        /*background-color: rgb(241,241,241);*/
     }
     .food_type_list_container{
         overflow-y: auto;
@@ -195,7 +268,7 @@ marquee{
         height: 0.9rem;
         line-height: 0.9rem;
     }
-    .food_type_list_item>p{
+    .food_type_list_item>a{
         margin-left: 0.3rem;
     }
     .showFoodListWhite{
@@ -214,14 +287,20 @@ marquee{
         background-color: #ffffff;
         /*height: 9.0rem;*/
     }
-    .food_list_item_container>ul{
-        height: 9.0rem;
+    .food_list_item_container ul{
+        height: auto;
+        position: absolute;
+        overflow-y: auto;
+    }
+    .food_list_item_ul{
+        height: 10.0rem;
         overflow-y: auto;
         position: relative;
-
     }
     .food_list_item{
+        /*overflow-y: auto;*/
         width: 100%;
+        position: relative;
     }
     .food_list_item_typeName{
         width: 100%;
@@ -261,35 +340,47 @@ marquee{
         position: relative;
     }
     .now_peace{
-        vertical-align: middle;
+        position: absolute;
         color: rgb(225,39,63);
         font-size: 0.34rem;
         font-weight: bolder;
+        left: 0;
     }
     .order_peace{
-        vertical-align: middle;
+        position: absolute;
         color: darkgray;
         margin-left: 0.14rem;
         font-size: 0.24rem;
         text-decoration: line-through;
+        left: 0.6rem;
+        top: 0.12rem;
     }
     .reduce{
-        vertical-align: middle;
+        position: absolute;
         width: 0.5rem;
-        margin-left: 1.18rem;
-    }
-    .now_count{
-        vertical-align: middle;
-        color: rgb(60,60,60);
+        visibility: hidden;
+        left: 2.3rem;
 
     }
+    .now_count{
+        position: absolute;
+        color: rgb(60,60,60);
+        left: 3.0rem;
+        top: 0.12rem;
+        visibility: hidden;
+    }
     .add_count{
-        vertical-align: middle;
+        position: absolute;
         width: 0.5rem;
+        right: 0;
     }
     .right_add_container{
         position: absolute;
         top: 0.24rem;
+        width: 100%;
+    }
+    .right_add_container_relative{
+        position: relative;
     }
 
 
@@ -500,7 +591,8 @@ marquee{
     }
     .same_type>p>span{
         vertical-align: middle;
-        font-size: 0.30rem;
+        font-size: 0.28rem;
+        font-weight: 500;
     }
     .phone_number{
         height: 0.36rem;
@@ -510,11 +602,195 @@ marquee{
         height: 0.36rem;
         vertical-align: middle;
         float: right;
-        font-weight: bold;
+
     }
     .dif_type_container{
         border-bottom: 0.14rem solid rgb(241,241,241);
     }
+    .business_sale_message_container{
+        width: 100%;
+        background-color: #fff;
+    }
+    .business_sale_message{
+        width: 6.9rem;
+        margin: 0 auto;
+    }
+    .business_server{
+        padding: 0.2rem 0;
+        font-size: 0.28rem;
+        font-weight: 500;
+    }
+    .business_server_message{
+        padding: 0.04rem 0 0.20rem 0;
+    }
+    .business_server_message>img{
+        width: 0.24rem;
+    }
+    .business_server_message>span{
+        font-size: 0.24rem;
+        color: black;
+    }
+
+
+/*购物车*/
+.shopping_car_bottom{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 0.97rem;
+    z-index: 10;
+    background-color: #fff;
+}
+.shopping_car_container{
+    float: left;
+    margin-left: 0.3rem;
+    width: 1.32rem;
+    height: 0.97rem;
+    position: relative;
+}
+    .shopping_car_pic{
+        position: absolute;
+        width: 1.10rem;
+        left: 0;
+        top: -0.23rem;
+
+    }
+    .shopping_car_count{
+        display: none;
+        position: absolute;
+        width: 0.46rem;
+        height: 0.46rem;
+        border-radius: 50%;
+        background-color: rgb(255,174,32);
+        text-align: center;
+        line-height: 0.46rem;
+        color: #ffffff;
+        left: 0.8rem;
+        top:-0.23rem;
+    }
+
+.altogether{
+    float: left;
+    width: 1.76rem;
+    height: 0.97rem;
+    line-height: 0.97rem;
+    font-size:0.28rem;
+    font-weight: bolder;
+}
+.lack{
+    float: left;
+    width: 2.7rem;
+    height: 0.97rem;
+    text-align: center;
+    line-height: 0.97rem;
+    color: #ffffff;
+    position: absolute;
+    right: 0;
+    background-color: rgb(170,170,170);
+}
+
+/*弹出购物车*/
+.show_shopping_car_container{
+    position:absolute;
+    left:0;
+    top:0;
+    background-color:#000;
+    width:100%;  /*宽度设置为100%，这样才能使隐藏背景层覆盖原页面*/
+    height: 10.0rem;
+    filter:alpha(opacity=60);  /*设置透明度为60%*/
+    opacity:0.6;  /*非IE浏览器下设置透明度为60%*/
+    display:none; /*  */
+    z-Index:6;
+}
+#shopping_car_content{
+    position: fixed;
+    left:0;
+    bottom: 0.97rem;
+    background-color: rgb(241,241,241);
+    z-index: 8;
+    width: 100%;
+    display: none;
+}
+
+.clear_shoppingCar_content{
+    width: 100%;
+    height: 0.80rem;
+    line-height: 0.8rem;
+}
+.clear_shopping{
+    float: right;
+    width: 0.34rem;
+    margin-right: 0.15rem;
+    margin-top: 0.23rem;
+}
+.clear_shoppingCar_content>span{
+    font-size: 0.28rem;
+    float: right;
+    margin-right: 0.15rem;
+}
+.shopping_item{
+    width: 100%;
+    height: 1.0rem;
+    background-color: #fff;
+    display: none;
+}
+.shopping_item_container{
+    width: 6.9rem;
+    margin: 0 auto;
+
+}
+.shoppingItem_name{
+    width: 50%;
+    height: 1.0rem;
+    text-align: left;
+    line-height: 1.0rem;
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    float: left;
+}
+.shoppingItem_peace{
+    float: left;
+    width: 20%;
+    text-align: center;
+    line-height: 1.0rem;
+}
+.shoppingItem_peaceNumber{
+    width: 30%;
+    float: left;
+    height: 1.0rem;
+    position: relative;
+}
+.reduceCar{
+    position: absolute;
+    width: 0.5rem;
+    top: 0.25rem;
+    left: 0.5rem;
+    visibility: visible;
+}
+.numberCar{
+    position: absolute;
+    font-size: 0.28rem;
+    top: 0.36rem;
+    left: 1.20rem;
+}
+.shopping_car_bg{
+    height: 0.97rem;
+    float: left;
+    width: 4.8rem;
+}
+.addCar{
+    position: absolute;
+    width: 0.5rem;
+    top: 0.25rem;
+    right: 0;
+}
+
+
+
+
+
+
 
 
 
