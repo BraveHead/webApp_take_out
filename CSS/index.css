@@ -1,0 +1,387 @@
+/*外卖首页列表*/
+
+/*html{
+    font-size: 100px;
+}*/
+body{
+    background-color: rgb(215,215,215);
+}
+
+/*切换首页列表状态*/
+.fixed_header{
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+}
+.switch_tab_header{
+    background-color: rgb(255,255,255);
+    height: 0.88rem;
+    top: 0;
+    border-bottom: 1px solid rgb(215,215,215);
+}
+.Selection_mode{
+    display:inline-block;
+    width: 3.51rem;
+    height: 0.58rem;
+    border:2px solid rgb(255,193,60);
+    border-radius: 0.1rem;
+    position: absolute;
+    top:0;
+    left: 1.7rem;
+}
+.switch_tab_header_container{
+     width: 6.9rem;
+     height: 0.54rem;
+     position: relative;
+    top:0.15rem ;
+ }
+.Selection_mode>a{
+    font-size: 0.28rem;
+    font-weight: bold;
+    color: rgb(255,193,60);
+    display: inline-block;
+    float: left;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    line-height: 0.56rem;
+}
+.Selection_mode>a:hover{
+    cursor: pointer;
+}
+.sort{
+    position: absolute;
+    top:0.1rem;
+    right: 0.54rem;
+}
+.sort>img{
+    width: 0.38rem;
+}
+
+.search{
+    position: absolute;
+    top:0.1rem;
+    right: 0;
+}
+.search>img{
+    width: 0.38rem;
+}
+.distribution_list{
+    display: none;
+}
+
+/*选择排序方式*/
+.fixed_sort{
+    position: fixed;
+    top: 0.89rem;
+    z-index: 99;
+    background-color: #ffffff;
+    display: none;
+}
+.fixed_sort li{
+    width: 7.5rem;
+    height: 0.9rem;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.fixed_sort li>span{
+    display: block;
+    width: 6.9rem;
+    height: 0.9rem;
+    line-height: 0.9rem;
+}
+.fixed_sort li{
+    font-size: 0.28rem;
+    color: #3c3c3c;
+    display: inline-block;
+    margin-left: 0.14rem;
+}
+.fixed_sort>li:hover{
+    cursor: pointer;
+}
+.fixed_sort ul .fixed_sort_clicked{
+    color: #FFC13C;
+}
+
+
+
+/*配送地址选择栏*/
+.fixed_address{
+    position: fixed;
+    top:0.89rem;
+    z-index: 5;
+    width: 100%;
+}
+.Delivery_address_selection{
+    background-color: rgb(255,255,255);
+    height: 0.84rem;
+    overflow: hidden;
+}
+.Delivery_address_selection_container{
+    /*position: relative;*/
+    width: 4.5rem;
+    margin-left:2.0rem;
+    height: 0.3rem;
+    margin-top: 0.30rem;
+
+}
+.address_clicked{
+    height: 0.32rem;
+    /*position: absolute;*/
+    /*left: 0.06rem;*/
+    /*top: 0.26rem;*/
+    vertical-align: middle;
+
+}
+.Delivery_address_selection span{
+    font-size: 0.28rem;
+    /*position: absolute;*/
+    /*top: 0.26rem;*/
+    /*left: 0.48rem;*/
+    vertical-align: middle;
+    color: rgb(137,137,137);
+}
+.Delivery_address_selection b{
+    font-size:0.28rem;
+    /*position: absolute;*/
+    /*top: 0.26rem;*/
+    /*left: 1.44rem;*/
+    vertical-align: middle;
+    rgb(130,130,130);
+}
+/*商家种类*/
+.selection_type{
+    font-size: 0.28rem;
+    position: relative;
+    align-items:center;
+    height: 0.61rem;
+    padding: 0.13rem 0.11rem;
+    background-color: #fff;
+    overflow-x: auto;
+    margin-top: 1.75rem;
+
+}
+    .selection_type_scroll{
+        position: absolute;
+        width: 8.5rem;
+        height: 0.61rem;
+    }
+
+    .category{
+        float: left;
+        padding:0.13rem 0;
+        margin: 0 0.32rem;
+        /*font-size: 0.26rem;*/
+        color: #777777;
+        border-bottom: 4px solid #fff;
+        cursor: pointer;
+    }
+
+    .in{
+        color:red;
+        border-bottom-color: red;
+    }
+    .category:nth-child(1){
+        margin-left:0.43rem ;
+    }
+
+/*商家列表*/
+.business_container{
+    width: 100%;
+    display: none;
+}
+
+.business_list_container{
+    background-color: rgb(255,255,255);
+    width: 100%;
+    /*height:2.20rem;*/
+    /*margin-bottom: 4px;*/
+    padding: 0.2rem 0;
+    border-bottom: 1px solid rgb(215,215,215);
+    margin-top:0.19rem;
+}
+    .business_list{
+
+        width: 100%;
+    }
+    .business_list_item{
+        width: 6.9rem;
+        height: 1.74rem;
+        margin: 0.2rem 0.3rem;
+    }
+    /*左边图像*/
+    .business_list_item_left{
+        width: 2.1rem;
+        height: 1.76rem;
+        float:left;
+    }
+    .business_list_item_left_container{
+        width: 2.1rem;
+        height: 1.76rem;
+        position: absolute;
+    }
+    .business_list_item_left img{
+        width: 2.1rem;
+        height: 1.74rem;
+        position: absolute;
+    }
+    .business_list_item_left span{
+        position: absolute;
+        display: inline-block;
+        width: 2.1rem;
+        top: 1.40rem;
+        height: 0.34rem;
+        font-size:0.24rem;
+        background-color: rgb(255,140,83);
+        text-align: center;
+        line-height: 0.34rem;
+        color: rgb(255,255,255);
+    }
+    
+    /*右边商品参数*/
+.business_list_item_right{
+    float: left;
+    margin-left:0.2rem;
+    width: 4.6rem;
+    height: 100%;
+}
+    .business_list_item_right_container{
+        position: relative;
+        width: 4.6rem;
+        height: 1.76rem;
+    }
+    .business_list_item_right_container b{
+        position: absolute;
+        width: 3.3rem;
+        top: 0.06rem;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+        color: #2a2a2a;
+    }
+    .score{
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0.7rem;
+        height: 0.5rem;
+        background-color:rgb(255,126,126);
+        text-align: center;
+        line-height: 0.5rem;
+        font-weight: bold;
+        color: white;
+        border-radius: 0.04rem;
+    }
+    .business_address{
+        width: 3.3rem;
+        position: absolute;
+        font-size:0.2rem;
+        word-wrap: break-word;/*自动换行*/
+        word-break: normal;
+        top:0.86rem;
+        color: rgb(195,195,195);
+    }
+    .business_name{
+        font-size: 0.2rem;
+        top: 0.52rem;
+        position: absolute;
+        color: rgb(195,195,195);
+    }
+    .business_talk{
+        position:absolute;
+        font-size:0.2rem;
+        top:1.54rem;
+        color: rgb(195,195,195);
+    }
+    .business_length{
+        position: absolute;
+        font-size: 0.2rem;
+        font-weight: bold;
+        top:1.52rem;
+        left: 3.8rem;
+        color: #2a2a2a;
+    }
+    .show{
+        display: block;
+    }
+    .business_list_item_left .food_now{
+        background-color: rgb(101,198,45);
+    }
+    .business_list_item_left .food_later{
+        background-color: red;
+    }
+    .linkToItem{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+/*搜索地址*/
+.peiSongQuYu{
+    position: absolute;
+    color: rgb(60,60,60);
+    left:2.80rem;
+    top: 0.15rem;
+}
+.searchAddressContainer{
+    position: relative;
+    width: 100%;
+    top: 0.90rem;
+    height: auto;
+}
+.searchInputItem{
+    height: 0.90rem;
+    border-bottom: 1px solid darkgrey;
+    text-align: left;
+    line-height: 0.90rem;
+}
+.searchInputItem>div{
+    width: 6.9rem;
+    height: 0.9rem;
+}
+.searchInputContainer{
+    background-color: #fff;
+    line-height: 0.90rem;
+}
+.searchInputContainer img{
+    width: 0.40rem;
+    vertical-align: middle;
+    margin-left: 0.20rem;
+}
+.searchInputContainer input{
+    vertical-align: middle;
+    border: none;
+    outline: none;
+}
+.ShowSearchAddress{
+    height: 11.50rem;
+    text-align: center;
+}
+.daXiang{
+    margin-top: 2.50rem;
+    width: 2.94rem;
+}
+.ShowSearchAddress>p{
+    margin-top: 0.44rem;
+    color: rgb(232,84,106);
+}
+.ShowSearchAddress>h5{
+    margin-top: 0.30rem;
+    font-size: 0.28rem;
+    color: rgb(83,83,83);
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+

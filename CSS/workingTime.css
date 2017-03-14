@@ -1,0 +1,104 @@
+body{
+    background-color: rgb(241,241,241);
+    font-size: 0.28rem;
+    color: rgb(60,60,60);
+}
+/*time头部*/
+.TimeHeaderContainer{
+    width: 100%;
+    height: 0.89rem;
+    background-color: rgb(27,27,32);
+}
+
+.TimeHeader{
+    margin: 0 auto;
+    height: 0.89rem;
+    width: 6.9rem;
+    line-height: 0.89rem;
+    color: #ffffff;
+    font-weight: bolder;
+}
+.timeHeaderBackPic{
+    vertical-align: middle;
+    width: 0.22rem;
+}
+.timeHeaderBackMessage{
+    vertical-align: middle;
+    display: inline-block;
+}
+.TimeHeaderClose{
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.TimeHeaderName{
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 0.48rem;
+}
+
+.TimeContentContainer{
+    width: 100%;
+    height: 0.83rem;
+    background-color: rgb(253,353,253);
+}
+.TimeContentTitle{
+    width: 6.9rem;
+    height: 0.83rem;
+    text-align: center;
+    line-height: 0.83rem;
+}
+.TimeTypeSwitchContainer{
+    width: 100%;
+    height: 0.80rem;
+    background-color: rgb(253,353,253);
+    margin-top: 0.01rem;
+}
+.TimeTypeSwitch{
+    width: 6.9rem;
+    height: 0.8rem;
+    margin: 0 auto;
+}
+.TimeTypeSwitchItem{
+    display: inline-block;
+    float: left;
+    text-align: center;
+    width: 50%;
+    height: 0.8rem;
+    line-height: 0.8rem;
+}
+.TimeTypeSwitchItem a{
+    padding: 0.14rem 0.1rem;
+    /*border-bottom: 0.04rem solid rgb(229,35,63);*/
+    border-bottom: 0.04rem solid rgb(253,253,253);
+}
+.TimeTypeSwitchItem a:hover{
+    cursor: pointer;
+}
+.showSwitchRed{
+    color: rgb(229,35,63);
+    border-bottom-color: rgb(229,35,63);
+}
+
+
+.TimeSwitchContext{
+    width: 100%;
+    height: auto;
+    display: none;
+}
+.TimeSwitchItem{
+    background-color: rgb(253,253,253);
+    width: 100%;
+    height: 0.83rem;
+    margin-bottom: 0.01rem;
+}
+.TimeSwitchItem span{
+    margin-left: 0.3rem;
+    line-height: 0.83rem;
+}.TimeSwitchItem time{
+    float: right;
+    margin-right: 0.3rem;
+     line-height:0.83rem;
+ }
+
+

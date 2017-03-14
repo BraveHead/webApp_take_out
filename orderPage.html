@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable='no'">
+    <title>商家点菜界面</title>
+    <link rel="stylesheet" href="CSS/lib/common.css"/>
+    <link rel="stylesheet" href="CSS/orderPage.css" type="text/css"/>
+    <link rel="stylesheet" href="CSS/lib/swiper-3.4.1.min.css"/>
+    <script src="JS/lib/autoSetRem.js"></script>
+
+</head>
+<body>
+
+<div class="new">
+
+    <header class="order_food_header">
+        <div class="order_header_nav">
+            <img src="Pictures/Pic/header_icon/back.png" class="order_back"/>
+            <span class="businessItemName">蜀香坊</span>
+            <img src="Pictures/Pic/click_food/white_stat.png" class="order_collection"/>
+            <img src="Pictures/Pic/header_icon/share.png" class="order_share"/>
+        </div>
+    </header>
+    <div class="order_container">
+    <div class="order_header_message_container">
+        <div class="order_header_message">
+            <div class="order_header_message_left">
+                <img src="Pictures/Pic/click_food/business_header_pic.png"/>
+            </div>
+            <div class="order_header_message_right">
+                <div class="order_message_name">满减特约-蜀香坊-City</div>
+                <div class="order_message_type">中餐，西餐，四川，日餐，韩餐，冰激凌</div>
+                <div class='order_message_safe'>
+                    <img src="Pictures/Pic/click_food/full_cut.png" class="safe_logo"/>
+                    <span class="safe_message">满30减25， 满60减55， 满90减70</span>
+                    <span class="safe_more">2个活动 <img src="Pictures/Pic/click_food/safe_down.png"/></span>
+                </div>
+                <div class="order_message_safe_hidden">
+                    <p>新用户第一次下单立减20</p>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <!--滚动广播-->
+    <div class="scroll_text">
+        <div class="scroll_text_container">
+            <img src="Pictures/Pic/click_food/advertisement.png"/>
+            <marquee>下大雨了，帅的司机都没了，为了你们的幸福，不开店了！</marquee>
+        </div>
+    </div>
+    <!--商家模块的切换-->
+    <div class="food_list_container">
+        <div class="business_module_container" id="contrast">
+            <a href="#" class="module_list"><span class="showBottomRed  module_list_default">点菜</span></a>
+            <a href="#" class="module_list"><span class="module_list_default">评价</span></a>
+            <a href="#" class="module_list"><span class="module_list_default">商家</span></a>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!--点菜-->
+                <div class="swiper-slide">
+                    <div class="food_type_list_container">
+                        <ul>
+                            <li class="food_type_list_item showFoodListWhite" ><a >热销</a></li>
+                            <li class="food_type_list_item" ><a >精选组合</a></li>
+                            <li class="food_type_list_item" ><a >饭类</a></li>
+                            <li class="food_type_list_item"><a >面类</a></li>
+                            <li class="food_type_list_item"><a >小吃</a></li>
+                        </ul>
+                    </div>
+                    <div class="food_list_item_container">
+                        <div class="food_list_item_ul">
+                            <ul>
+                                <li class="food_list_item" >
+                                    <p class="food_list_item_typeName" id="rexiao"><span>热销</span></p>
+                                    <div class="food_list_item_foodName">
+                                        <img src="Pictures/Pic/click_food/no_loading.png" class="foodName_left"/>
+                                        <div class="foodName_right">
+                                            <div class="foodName_right_message">春卷</div>
+                                            <div class="foodName_right_add">
+                                                <div class="right_add_container">
+                                                    <div class="right_add_container_relative">
+                                                        <span class="now_peace">$22</span><del class="order_peace">$30</del>
+                                                        <img src="Pictures/Pic/click_food/reduce.png" class="reduce"/>
+                                                        <span class="now_count">0</span>
+                                                        <img src="Pictures/Pic/click_food/add.png" class="add_count"/>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clear">
+                                        </div>
+                                    </div>
+                                    <div class="food_list_item_foodName">
+                                        <img src="Pictures/Pic/click_food/food_pic.png" class="foodName_left"/>
+                                        <div class="foodName_right">
+                                            <div class="foodName_right_message">麻瓜</div>
+                                            <div class="foodName_right_add">
+                                                <div class="right_add_container">
+                                                    <span class="now_peace">$25</span><del class="order_peace">$30</del>
+                                                    <img src="Pictures/Pic/click_food/reduce.png" class="reduce"/>
+                                                    <span class="now_count">0</span>
+                                                    <img src="Pictures/Pic/click_food/add.png" class="add_count linkToSkuFood"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clear">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="food_list_item" >
+                                    <p class="food_list_item_typeName" id="zuhe" >精选组合</p>
+                                    <div class="food_list_item_foodName">
+                                        <img src="Pictures/Pic/click_food/no_loading.png" class="foodName_left"/>
+                                        <div class="foodName_right">
+                                            <div class="foodName_right_message">黄瓜</div>
+                                            <div class="foodName_right_add">
+                                                <div class="right_add_container">
+                                                    <span class="now_peace">$24</span><del class="order_peace">$30</del>
+                                                    <img src="Pictures/Pic/click_food/reduce.png" class="reduce"/>
+                                                    <span class="now_count">0</span>
+                                                    <img src="Pictures/Pic/click_food/add.png" class="add_count"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clear">
+                                        </div>
+                                    </div>
+                                    <div class="food_list_item_foodName">
+                                        <img src="Pictures/Pic/click_food/food_pic.png" class="foodName_left"/>
+                                        <div class="foodName_right">
+                                            <div class="foodName_right_message">小菜</div>
+                                            <div class="foodName_right_add">
+                                                <div class="right_add_container">
+                                                    <span class="now_peace">$22</span><del class="order_peace">$30</del>
+                                                    <img src="Pictures/Pic/click_food/reduce.png" class="reduce"/>
+                                                    <span class="now_count">0</span>
+                                                    <img src="Pictures/Pic/click_food/add.png" class="add_count"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clear">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="food_list_item" >
+                                    <p class="food_list_item_typeName" id="fanlei" >饭类</p>
+                                    <div class="food_list_item_foodName">
+                                        <img src="Pictures/Pic/click_food/no_loading.png" class="foodName_left"/>
+                                        <div class="foodName_right">
+                                            <div class="foodName_right_message">肉类</div>
+                                            <div class="foodName_right_add">
+                                                <div class="right_add_container">
+                                                    <span class="now_peace">$11</span><del class="order_peace">$30</del>
+                                                    <img src="Pictures/Pic/click_food/reduce.png" class="reduce"/>
+                                                    <span class="now_count">0</span>
+                                                    <img src="Pictures/Pic/click_food/add.png" class="add_count"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clear">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="food_list_item" >
+                                    <p class="food_list_item_typeName" id="mianlei">面类</p>
+                                    <div class="food_list_item_foodName">
+                                        <img src="Pictures/Pic/click_food/food_pic.png" class="foodName_left"/>
+                                        <div class="foodName_right">
+                                            <div class="foodName_right_message">视屏</div>
+                                            <div class="foodName_right_add">
+                                                <div class="right_add_container">
+                                                    <span class="now_peace">$34</span><del class="order_peace">$30</del>
+                                                    <img src="Pictures/Pic/click_food/reduce.png" class="reduce"/>
+                                                    <span class="now_count">0</span>
+                                                    <img src="Pictures/Pic/click_food/add.png" class="add_count"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clear">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="food_list_item" >
+                                    <p class="food_list_item_typeName" id="xiaochi">小吃</p>
+                                    <div class="food_list_item_foodName">
+                                        <img src="Pictures/Pic/click_food/food_pic.png" class="foodName_left"/>
+                                        <div class="foodName_right">
+                                            <div class="foodName_right_message">好吃的</div>
+                                            <div class="foodName_right_add">
+                                                <div class="right_add_container">
+                                                    <span class="now_peace">$24</span><del class="order_peace">$30</del>
+                                                    <img src="Pictures/Pic/click_food/reduce.png" class="reduce"/>
+                                                    <span class="now_count">0</span>
+                                                    <img src="Pictures/Pic/click_food/add.png" class="add_count"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clear">
+                                        </div>
+                                    </div>
+                                    <div class="food_list_item_foodName">
+                                        <img src="Pictures/Pic/click_food/no_loading.png" class="foodName_left"/>
+                                        <div class="foodName_right">
+                                            <div class="foodName_right_message">不好吃的</div>
+                                            <div class="foodName_right_add">
+                                                <div class="right_add_container">
+                                                    <span class="now_peace">$14</span><del class="order_peace">$30</del>
+                                                    <img src="Pictures/Pic/click_food/reduce.png" class="reduce"/>
+                                                    <span class="now_count">0</span>
+                                                    <img src="Pictures/Pic/click_food/add.png" class="add_count"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clear">
+                                        </div>
+                                    </div>
+                                    <div class="food_list_item_foodName">
+                                        <img src="Pictures/Pic/click_food/no_loading.png" class="foodName_left"/>
+                                        <div class="foodName_right">
+                                            <div class="foodName_right_message">一点不好</div>
+                                            <div class="foodName_right_add">
+                                                <div class="right_add_container">
+                                                    <span class="now_peace">$34</span><del class="order_peace">$30</del>
+                                                    <img src="Pictures/Pic/click_food/reduce.png" class="reduce"/>
+                                                    <span class="now_count">0</span>
+                                                    <img src="Pictures/Pic/click_food/add.png" class="add_count"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clear">
+                                        </div>
+                                    </div>
+                                    <div class="food_list_item_foodName">
+                                        <img src="Pictures/Pic/click_food/no_loading.png" class="foodName_left"/>
+                                        <div class="foodName_right">
+                                            <div class="foodName_right_message">都好</div>
+                                            <div class="foodName_right_add">
+                                                <div class="right_add_container">
+                                                    <span class="now_peace">$12</span><del class="order_peace">$30</del>
+                                                    <img src="Pictures/Pic/click_food/reduce.png" class="reduce"/>
+                                                    <span class="now_count">0</span>
+                                                    <img src="Pictures/Pic/click_food/add.png" class="add_count"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clear">
+                                        </div>
+                                    </div>
+                                    <div class="food_list_item_foodName">
+                                        <img src="Pictures/Pic/click_food/no_loading.png" class="foodName_left"/>
+                                        <div class="foodName_right">
+                                            <div class="foodName_right_message">真的不好</div>
+                                            <div class="foodName_right_add">
+                                                <div class="right_add_container">
+                                                    <span class="now_peace">$23</span><del class="order_peace">$30</del>
+                                                    <img src="Pictures/Pic/click_food/reduce.png" class="reduce"/>
+                                                    <span class="now_count">0</span>
+                                                    <img src="Pictures/Pic/click_food/add.png" class="add_count"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clear">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="clear"></div>
+                </div>
+                <!--评价-->
+                <div class="swiper-slide">
+                    <div class="evaluate_background">
+                        <div>
+                            <div class="evaluate_sort"><b>4</b><span>.5</span></div>
+                            <p class="evaluate_number">1174外卖用户评价</p>
+                        </div>
+                    </div>
+                    <div class="choice_evaluate">
+                        <div class="choice_evaluate_container">
+                            <img src="Pictures/Pic/evaluate/no_choice.png"/>
+                            <span>只显示有文字评论的内容</span>
+                        </div>
+                    </div>
+                    <div class="evaluate_content">
+                        <!--用户评价-->
+                        <div class="evaluate_content_container">
+                            <div class="evaluate_context_left">
+                                <img src="Pictures/Pic/evaluate/header_pic.png"/>
+                            </div>
+                            <div class="evaluate_context_right">
+                                <div class="customer_id">
+                                    <b>不是乌贝拉</b>
+                                    <span>
+                                        <img src="Pictures/Pic/evaluate/yellow_star.png"/><img src="Pictures/Pic/evaluate/yellow_star.png"/><img src="Pictures/Pic/evaluate/yellow_star.png"/><img src="Pictures/Pic/evaluate/gray_star.png"/><img src="Pictures/Pic/evaluate/gray_star.png"/>
+                                    </span>
+                                </div>
+                                <div class="context_message">
+                                    <span>
+                                        不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉
+                                        不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉,
+                                        不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉
+                                        不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉
+                                        不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉
+                                    </span>
+                                    <time>2017-01-08 08:50</time>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <!--商家回复-->
+                        <div class="evaluate_content_container">
+                            <div class="evaluate_context">
+                                <div class="evaluate_context_left business_evaluate_left">
+                                    <img src="Pictures/Pic/evaluate/header_pic.png"/>
+                                </div>
+                                <div class="evaluate_context_right business_evaluate_right">
+                                    <div class="customer_id">
+                                        <b>不是乌贝拉</b>
+                                        <time>2017-01-08 08:50</time>
+                                    </div>
+                                    <div class="context_message">
+                                    <span>
+                                        不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉
+                                        不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉,
+                                        不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉
+                                        不是乌贝拉不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉不是乌贝拉不是乌贝拉,不是乌贝拉
+                                    </span>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <!--商家详情-->
+                <div class="swiper-slide">
+                    <div class="business_content">
+                        <!--logo-->
+                        <div class="business_center_logo_container">
+                            <div class="business_center_logo">
+                                <a class="logo_message">
+                                    <img src="Pictures/Pic/business_pic/logo_message.png"/>
+                                    <span>查看店铺详情</span>
+                                </a>
+                                <p class="describe_logo">-进入店铺详情可查看更多的到店点评-</p>
+                            </div>
+                        </div>
+                        <!--phone-->
+                        <div class="same_type_container">
+                            <div class="same_type">
+                                <p>
+                                    <img src="Pictures/Pic/business_pic/phone_number.png" class="phone_number"/>
+                                    <span>1322 120 332</span>
+                                    <img src="Pictures/Pic/business_pic/point.png" class="point"/>
+                                </p>
+                            </div>
+                        </div>
+                        <!--地址-->
+                        <div class="same_type_container dif_type_container">
+                            <div class="same_type">
+                                <p>
+                                    <img src="Pictures/Pic/business_pic/adress.png" class="phone_number"/>
+                                    <span>6/123 Muriel Ave, Moorooka QLD 4105 </span>
+                                    <img src="Pictures/Pic/business_pic/point.png" class="point"/>
+                                </p>
+                            </div>
+                        </div>
+                        <!--配送时间-->
+                        <a class="same_type_container dif_type_container peisong" href="workingTime.html">
+                            <div class="same_type">
+                                <p>
+                                    <img src="Pictures/Pic/business_pic/distribution.png" class="phone_number"/>
+                                    <span>配送时间: 08:00-22:00</span>
+                                    <img src="Pictures/Pic/business_pic/point.png" class="point"/>
+                                </p>
+                            </div>
+                        </a>
+                        <!--营业时间-->
+                        <a class="same_type_container dif_type_container yinye" href="workingTime.html">
+                            <div class="same_type">
+                                <p>
+                                    <img src="Pictures/Pic/business_pic/do_business.png" class="phone_number"/>
+                                    <span>营业时间: 08:00-22:30</span>
+                                    <img src="Pictures/Pic/business_pic/point.png" class="point"/>
+                                </p>
+                            </div>
+                        </a>
+
+                        <!--商家优惠信息-->
+                        <div class="business_sale_message_container">
+                            <div class="business_sale_message">
+                                <p class="business_server">商家优惠与服务</p>
+                                <p class="business_server_message">
+                                    <img src="Pictures/Pic/click_food/full_cut.png"/>
+                                    <span>满30减25，满50减30，满70减35，满90减50</span>
+                                </p>
+                                <p class="business_server_message">
+                                    <img src="Pictures/Pic/click_food/full_cut.png"/>
+                                    <span>新用户立减30</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+<!--弹出购物车背景-->
+<div class="show_shopping_car_container">
+
+</div>
+
+<!--购物车商品-->
+<div id="shopping_car_content">
+    <div class="clear_shoppingCar_content">
+        <span>清空</span>
+        <img src="Pictures/Pic/click_food/clear_shoppingCar.png" class="clear_shopping"/>
+    </div>
+
+    <div class="shopping_item">
+        <div class="shopping_item_container">
+            <div class="shoppingItem_name">
+                春卷
+            </div>
+            <div class="shoppingItem_peace">
+                $22
+            </div>
+            <div class="shoppingItem_peaceNumber">
+                <img src="Pictures/Pic/click_food/reduce.png" class="reduceCar"/>
+                <span class="numberCar">0</span>
+                <img src="Pictures/Pic/click_food/add.png" class="addCar"/>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="shopping_item">
+        <div class="shopping_item_container">
+            <div class="shoppingItem_name">
+                麻瓜
+            </div>
+            <div class="shoppingItem_peace">
+                $25
+            </div>
+            <div class="shoppingItem_peaceNumber">
+                <img src="Pictures/Pic/click_food/reduce.png" class="reduceCar"/>
+                <span class="numberCar">0</span>
+                <img src="Pictures/Pic/click_food/add.png" class="addCar"/>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="shopping_item">
+        <div class="shopping_item_container">
+            <div class="shoppingItem_name">
+                黄瓜
+            </div>
+            <div class="shoppingItem_peace">
+                $24
+            </div>
+            <div class="shoppingItem_peaceNumber">
+                <img src="Pictures/Pic/click_food/reduce.png" class="reduceCar"/>
+                <span class="numberCar">0</span>
+                <img src="Pictures/Pic/click_food/add.png" class="addCar"/>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="shopping_item">
+        <div class="shopping_item_container">
+            <div class="shoppingItem_name">
+                小菜
+            </div>
+            <div class="shoppingItem_peace">
+                $22
+            </div>
+            <div class="shoppingItem_peaceNumber">
+                <img src="Pictures/Pic/click_food/reduce.png" class="reduceCar"/>
+                <span class="numberCar">0</span>
+                <img src="Pictures/Pic/click_food/add.png" class="addCar"/>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="shopping_item">
+        <div class="shopping_item_container">
+            <div class="shoppingItem_name">
+                肉类
+            </div>
+            <div class="shoppingItem_peace">
+                $11
+            </div>
+            <div class="shoppingItem_peaceNumber">
+                <img src="Pictures/Pic/click_food/reduce.png" class="reduceCar"/>
+                <span class="numberCar">0</span>
+                <img src="Pictures/Pic/click_food/add.png" class="addCar"/>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="shopping_item">
+        <div class="shopping_item_container">
+            <div class="shoppingItem_name">
+                视屏
+            </div>
+            <div class="shoppingItem_peace">
+                $34
+            </div>
+            <div class="shoppingItem_peaceNumber">
+                <img src="Pictures/Pic/click_food/reduce.png" class="reduceCar"/>
+                <span class="numberCar">0</span>
+                <img src="Pictures/Pic/click_food/add.png" class="addCar"/>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="shopping_item">
+        <div class="shopping_item_container">
+            <div class="shoppingItem_name">
+                好吃的
+            </div>
+            <div class="shoppingItem_peace">
+                $24
+            </div>
+            <div class="shoppingItem_peaceNumber">
+                <img src="Pictures/Pic/click_food/reduce.png" class="reduceCar"/>
+                <span class="numberCar">0</span>
+                <img src="Pictures/Pic/click_food/add.png" class="addCar"/>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="shopping_item">
+        <div class="shopping_item_container">
+            <div class="shoppingItem_name">
+                不好吃的
+            </div>
+            <div class="shoppingItem_peace">
+                $14
+            </div>
+            <div class="shoppingItem_peaceNumber">
+                <img src="Pictures/Pic/click_food/reduce.png" class="reduceCar"/>
+                <span class="numberCar">0</span>
+                <img src="Pictures/Pic/click_food/add.png" class="addCar"/>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="shopping_item">
+        <div class="shopping_item_container">
+            <div class="shoppingItem_name">
+                一点不好
+            </div>
+            <div class="shoppingItem_peace">
+                $34
+            </div>
+            <div class="shoppingItem_peaceNumber">
+                <img src="Pictures/Pic/click_food/reduce.png" class="reduceCar"/>
+                <span class="numberCar">0</span>
+                <img src="Pictures/Pic/click_food/add.png" class="addCar"/>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="shopping_item">
+        <div class="shopping_item_container">
+            <div class="shoppingItem_name">
+                都好
+            </div>
+            <div class="shoppingItem_peace">
+                $12
+            </div>
+            <div class="shoppingItem_peaceNumber">
+                <img src="Pictures/Pic/click_food/reduce.png" class="reduceCar"/>
+                <span class="numberCar">0</span>
+                <img src="Pictures/Pic/click_food/add.png" class="addCar"/>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="shopping_item">
+        <div class="shopping_item_container">
+            <div class="shoppingItem_name">
+                真的不好
+            </div>
+            <div class="shoppingItem_peace">
+                $23
+            </div>
+            <div class="shoppingItem_peaceNumber">
+                <img src="Pictures/Pic/click_food/reduce.png" class="reduceCar"/>
+                <span class="numberCar">0</span>
+                <img src="Pictures/Pic/click_food/add.png" class="addCar"/>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+
+</div>
+<!--购物车-->
+<div class="shopping_car_bottom">
+    <div class="shopping_car_bg">
+        <div class="shopping_car_container">
+            <img src="Pictures/Pic/click_food/no_shopping.png" class="shopping_car_pic"/>
+            <span class="shopping_car_count">0</span>
+        </div>
+        <div class="altogether">购物篮是空的</div>
+        <div class="clear"></div>
+    </div>
+
+    <a class="lack" href="#">
+        还差$40
+    </a>
+    <div class="clear"></div>
+</div>
+<!--skuFood界面-->
+<div class="skuFoodHtml">
+    <div class="TimeHeaderContainer">
+        <div class="TimeHeader">
+            <img src="Pictures/Pic/header_icon/back.png" class="timeHeaderBackPic"/>
+            <span class="timeHeaderBackMessage">返回</span>
+            <span class="TimeHeaderClose">关闭</span>
+            <span class="TimeHeaderName">DQ(广州丽影店)</span>
+        </div>
+    </div>
+    <div class="optionContainer">
+        <div class="optionContent">
+            <span class="timeHeaderBackMessage">取消</span>
+            <span class="xuanxiang">选项</span>
+            <span class="sure">确定</span>
+        </div>
+    </div>
+
+    <div class="skuFoodContainer">
+        <div class="skuFoodContent">
+            <img src="Pictures/Pic/click_food/food_pic.png" class="skuFoodLeftPic"/>
+            <div class="skuFoodMessage">
+                <div class="skuFoodName"></div>
+                <div class="skuFoodPeaceCount">
+                    <span class="skuFoodPeace"></span>
+                    <img src="Pictures/Pic/click_food/reduce.png" class="skuFoodReduce"/>
+                    <span class="skuFoodCount"></span>
+                    <img src="Pictures/Pic/click_food/add.png" class="skuFoodAddCount"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flavorContainer">
+        <div class="flavor">
+            <div class="flavorItem flavorItemSummary">辣度</div>
+            <div class="flavorItem"><img src="Pictures/Pic/skuFood/clickedRound.png" class="flavorItemPic"/><span>大辣</span></div>
+            <div class="flavorItem"><img src="Pictures/Pic/skuFood/noClickedRound.png" class="flavorItemPic"/><span>中辣</span></div>
+            <div class="flavorItem"><img src="Pictures/Pic/skuFood/noClickedRound.png" class="flavorItemPic"/><span>微辣</span></div>
+        </div>
+    </div>
+    <div class="flavorContainer">
+        <div class="flavor">
+            <div class="flavorItem flavorItemSummary">素菜</div>
+            <div class="flavorItem"><img src="Pictures/Pic/skuFood/clickedSquare.png" class="addDish"/><span>青菜</span></div>
+            <div class="flavorItem"><img src="Pictures/Pic/skuFood/noClickedSquare.png" class="addDish"/><span>大白菜</span></div>
+            <div class="flavorItem"><img src="Pictures/Pic/skuFood/noClickedSquare.png" class="addDish"/><span>年糕</span></div>
+        </div>
+    </div>
+</div>
+
+<!--服务设置弹框-->
+<div class="serverSettingContainer"></div>
+<div class="serverSetting">
+    <div class="serverSettingTitel">
+        <span>宅急送服务设置</span>
+        <img src="Pictures/Pic/click_food/serverClose.png"/>
+    </div>
+    <div class="serverSettingText">请选择服务和具体信息</div>
+
+    <div class="serverSettingType">
+        <div>
+            <img src="Pictures/Pic/click_food/noClickedServer.png"/>
+            <span>配送上门</span>
+        </div>
+        <div>
+            <img src="Pictures/Pic/click_food/clickedServer.png"/>
+            <span>到店自取</span>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="serverSettingItemContainer">
+        <div class="serverSettingItem">
+            <div class="regionDiv"><span>Sunnybank</span><img src="Pictures/Pic/click_food/serverSettingDown.png"/></div>
+            <div class="regionDiv"><span>16/03/2017 </span><img src="Pictures/Pic/click_food/serverSettingDown.png"/></div>
+            <div class="regionDiv"><span>14:00</span><img src="Pictures/Pic/click_food/serverSettingDown.png"/></div>
+        </div>
+        <div class="serverSettingItem show">
+            <div class="regionDiv"><span>16/03/2017</span><img src="Pictures/Pic/click_food/serverSettingDown.png"/></div>
+            <div class="regionDiv"><span>14:00</span><img src="Pictures/Pic/click_food/serverSettingDown.png"/></div>
+        </div>
+    </div>
+    <div class="sureOrClose">
+        <a class="cancelServer">取消</a>
+        <a class="sureServer">确定</a>
+    </div>
+</div>
+
+<!--弹框位置选择-->
+<div class="regionListContainer">
+    <div><b>区域</b></div>
+    <ul>
+        <li><span>ABCDEFG LERT1</span></li>
+        <li><span>ABCDEFG LERT2</span></li>
+        <li><span>今天</span></li>
+        <li><span>明天</span></li>
+        <li><span>2016/3/14</span></li>
+        <li><span>2016/3/15 </span></li>
+        <li><span>12:00</span></li>
+        <li><span>13:00</span></li>
+        <li><span>14:00</span></li>
+
+    </ul>
+</div>
+
+</body>
+<script src="JS/lib/jquery.js"></script>
+<script src="JS/lib/swiper-3.4.1.jquery.min.js"></script>
+<script src="JS/lib/ajax.js"></script>
+<script src="JS/orderPage.js"></script>
+</html>
