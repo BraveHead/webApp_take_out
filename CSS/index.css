@@ -126,6 +126,9 @@ body{
     margin-top: 0.30rem;
 
 }
+.Delivery_address_selection_container b{
+    color: rgb(60,60,60);
+}
 .address_clicked{
     height: 0.32rem;
     /*position: absolute;*/
