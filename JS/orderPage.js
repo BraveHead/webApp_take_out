@@ -7,17 +7,17 @@
     var shoppingContainer = document.getElementsByClassName('show_shopping_car_container');
     var shoppingBottom = document.getElementsByClassName('shopping_car_bottom');
     $('.show_shopping_car_container').css('height',document.body.offsetHeight +"px") ;
-    var arrStat = ['Pictures/Pic/click_food/white_stat.png','Pictures/Pic/click_food/red_stat.png'];
+    // var arrClickedArr = ['Pictures/Pic/click_food/collection_dark.png','Pictures/Pic/click_food/red_stat.png'];
+    var arrStat = ['Pictures/Pic/header_icon/no_collection.png','Pictures/Pic/click_food/collection_dark.png'];
+    var shareArr = ['Pictures/Pic/header_icon/share.png',"Pictures/Pic/click_food/share_dark.png"];
     var backArr = ['Pictures/Pic/header_icon/back.png','Pictures/Pic/header_icon/back_gray.png'];
     var storage = window.sessionStorage;
     var foodCount = 0;
     let allFoodItemCount;
 
 
-
     /*选择配送服务*/
     function choiceServer() {
-
         setTimeout(function () {
             $('.serverSettingContainer').css({
                 'display':'block',
@@ -28,9 +28,7 @@
                 "top":($(document).height() - $('.serverSetting').height())/2+'px'
             });
         },100);
-
         let serverPicArr = ['Pictures/Pic/click_food/noClickedServer.png','Pictures/Pic/click_food/clickedServer.png'];
-
         $('.serverSettingType>div>img').on('click',function () {
             let index = $('.serverSettingType>div>img').index(this);
             $('.serverSettingType>div>img').attr('src',serverPicArr[0]);
@@ -80,18 +78,35 @@
 
     /*点击收藏*/
     function Collection() {
-
-        var statIndex = 1;
+        var statIndex = 0;
         $('.order_collection').on('click',function (e) {
             statIndex++;
+            storage.setItem("clickedStat",'true');
+            arrStat[statIndex] = "Pictures/Pic/click_food/red_stat.png";
             if(statIndex >= 2){
                 statIndex = 0;
+                storage.setItem("clickedStat",'false');
             }
             $(this).attr('src',arrStat[statIndex]);
         });
     }
-
-
+    /*点击分享*/
+    function clickShare() {
+        $('.order_share').on("click",function (e) {
+            $('.serverSettingContainer').css({
+                "display":'block',
+                "height":$(document).height() + "px"
+            });
+            $('.ShareListContainer').css({
+                "display":'block',
+                'top':($(document).height() - $('.ShareListContainer').height())/2 + "px"
+            });
+        });
+        $('.ShareListContainer>div').on('click',function (e) {
+            $('.serverSettingContainer').css("display",'none');
+            $('.ShareListContainer').css('display','none');
+        });
+    }
     /*更多优惠的点击显示*/
     function ShowSafe() {
         var arrSrc= ['Pictures/Pic/click_food/safe_down.png','Pictures/Pic/click_food/safe_up.png'];
@@ -105,15 +120,11 @@
             $('.order_message_safe_hidden').slideToggle("normal");
         });
     }
-
-
-
     /*运用swiper来把点菜，评价，商家的各个模块同个tab的切换来实现衔接*/
 
     function switchTab() {
         var mySwiper = new Swiper('.swiper-container',{
         });
-
         $('.module_list').click(function(){
             var listIndex = $(this).index();
             console.log(listIndex);
@@ -122,18 +133,10 @@
             mySwiper.slideTo(listIndex, 1000, false);//切换到第listIndex个slide，速度为1秒
         });
     }
-
     /*监听页面容器的滚动，产生变化*/
-
     function listenScrollBox() {
         var newOne = document.querySelectorAll(".new");
-        var orderContainer = document.querySelectorAll('.order_container');
-
-       /* $('.order_container').on('scroll',function (event) {
-            var e = event || window.event;
-            console.log('123123123');
-        });*/
-       var newScrollTop;
+        var newScrollTop;
        newOne[0].addEventListener('scroll',function (e) {
            newScrollTop = newOne[0].scrollTop;
            if(newScrollTop >= 20){
@@ -142,12 +145,18 @@
                 $('.order_collection').attr('src',arrStat[1]);
                 $('.order_header_message_container').addClass('headerTransform showTransformHidden');
                 $('.businessItemName').css({'display':'block','color':'black'});
+                $('.order_share').attr("src",shareArr[1]);
+                arrStat[0] = 'Pictures/Pic/click_food/collection_dark.png';
            }else{
+               $('.order_share').attr("src",shareArr[0]);
                $('.order_food_header').removeClass("headerTransform");
                $('.order_back').attr('src',backArr[0]);
-               $('.order_collection').attr('src',arrStat[0]);
+               if(!storage.getItem("clickedStat")){
+                   $('.order_collection').attr('src',arrStat[0]);
+               }
                $('.order_header_message_container').removeClass('headerTransform showTransformHidden');
                $('.businessItemName').css({'display':'none','color':'black'});
+               arrStat[0] = 'Pictures/Pic/header_icon/no_collection.png';
            }
         })
 
@@ -175,9 +184,7 @@
                         setInterval(setScrollTop);
                         next = parseInt(this.getAttribute("contentHeight"));
                         console.log(parseInt(next));
-
                         console.log($('.food_list_item_ul').scrollTop());
-
                         var setScrollTop = setInterval(function () {
                             if(next > addNext){
                                 addNext += 50;
@@ -215,7 +222,6 @@
 
    /*购物车功能*/
    function ShoppingCar() {
-
        /*获取数据并存到本地*/
        setTimeout(function (e) {
            $.ajax({
@@ -234,26 +240,6 @@
            })
 
        },1000);
-       /**
-        * @reduceName 减少按钮的className
-        * @countName   数量的className
-        * @index 当前的节点的下标
-        * @count 当前的存储的数量
-        */
-       /*添加数据的方法*/
-      /* function addCount(countName,index,count) {
-           let foodItem = JSON.parse(storage.getItem("foodItem"+index));
-           console.log(foodItem);
-           if(foodItem.sku == "0"){
-               count += 1;
-               foodItem.count = count;
-               storage.setItem('foodItem'+index, JSON.stringify(foodItem));
-               let foodItemNext = JSON.parse(storage.getItem("foodItem"+index));
-               $("."+countName).eq(index).text(foodItemNext.count);
-               console.log(foodItemNext.count);
-           }
-
-       }*/
 
        /**
         * @reduceName 减少按钮的className
@@ -294,53 +280,6 @@
             }
 
        }
-
-        /*
-        * @addElement 点击添加事件的节点className
-        * @reduceElement 该节点边上的减少按钮的className
-        */
-       /*添加方法*/
-      /* function addFoodCount(addElement,reduceElement) {
-
-           let nowIndex = $('.'+ "add_count").index(this);
-           console.log(nowIndex);
-           let foodItem = JSON.parse(storage.getItem("foodItem"+nowIndex));
-           let nowCount = foodItem.count;
-           if(foodItem.sku == "0"){
-               nowCount += 1;
-               foodItem.count = nowCount;
-               storage.setItem('foodItem'+nowIndex, JSON.stringify(foodItem));
-               let foodItemNext = JSON.parse(storage.getItem('foodItem'+nowIndex));
-               console.log(foodItemNext.count);
-               $('.now_count').eq(nowIndex).text(foodItemNext.count);
-               buttonShowOrHidden(reduceElement,addElement,nowIndex);
-
-               ShoppingListItemShowOrHidden(nowIndex);
-           }else{
-
-           }
-           console.log('点击添加ok');
-       }*/
-       /*
-       * @reduceElement 减少按钮的className
-       * */
-       /*减少方法*/
-       /*function reduceFoodCount(reduceElement) {
-           let nowIndex = $('.'+ reduceElement).index();
-           let foodItem = JSON.parse(storage.getItem("foodItem"+nowIndex));
-           let nowCount = foodItem.count;
-
-           nowCount -= 1;
-           foodItem.count = nowCount;
-           storage.setItem('foodItem'+nowIndex, JSON.stringify(foodItem));
-           let foodItemNext = JSON.parse(storage.getItem('foodItem'+nowIndex));
-           $('.now_count').eq(nowIndex).text(foodItemNext.count);
-           console.log(foodItemNext.count);
-           buttonShowOrHidden(reduceElement,'now_count',nowIndex);
-           ShoppingListItemShowOrHidden(nowIndex);
-           console.log('点击减少ok');
-
-       }*/
 
         /*添加事件*/
         let isChoiceServer = false;
@@ -558,6 +497,7 @@
     function init() {
         // choiceServer();//配送服务选择
         Collection();//点击收藏
+        clickShare();//点击分享
         ShowSafe();//点击优惠的时候可以全部显示出来
         switchTab();//点击每个模块的时候可以呈现对应的内容
         listenScrollBox();//监听页面容器的滚动变化

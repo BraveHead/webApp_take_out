@@ -1,6 +1,6 @@
 /*点菜界面的头部返回，收藏和分享*/
 body{
-    background-color: rgb(255,193,60);
+    background-color: #e5233f;
     overflow: hidden;
 }
 .new{
@@ -13,7 +13,7 @@ body{
 
 .order_food_header{
     width: 100%;
-    background-color: rgb(255,193,60);
+    background-color: #e5233f;
     position: fixed;
     z-index: 5;
 }
@@ -23,7 +23,7 @@ body{
 }
 @keyframes headerChangeColor {
     0%{
-        background-color: rgb(255,193,60);
+        background-color: #e5233f;
     }
     100%{
         background-color: #ffffff;
@@ -31,7 +31,7 @@ body{
 }
 @-moz-keyframes headerChangeColor {
     from{
-        background-color: rgb(255,193,60);
+        background-color: #e5233f;
     }
     to{
         background-color: rgb(255,0,0);
@@ -83,7 +83,7 @@ body{
 }
 .businessItemName{
     position: absolute;
-    top: 0.4rem;
+    top: 0.32rem;
     font-size: 0.28rem;
     font-weight: bolder;
     color: #ffffff;
@@ -92,14 +92,14 @@ body{
 }
 .order_collection{
     position: absolute;
-    top:0.25rem;
+    top:0.15rem;
     height: 0.64rem;
-    left: 5.8rem;
+    left: 5.6rem;
 }
 .order_share{
-    width: 0.32rem;
+    width: 0.35rem;
     position: absolute;
-    top: 0.23rem;
+    top: 0.15rem;
     right: 0;
 }
 
@@ -114,7 +114,7 @@ body{
 }
 .order_header_message_container{
     width: 100%;
-    background-color: rgb(255,193,60);
+    background-color: #e5233f;
     overflow: hidden;
     display: block;
 }
@@ -1084,6 +1084,40 @@ marquee{
     margin-left: 0.36rem;
 }
 
+/*分享朋友圈*/
+.ShareListContainer{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    height: 5.30rem;
+    z-index: 51;
+    display: none;
+}
+.ShareListContainer>span{
+    width: 1.00rem;
+    height: 1.50rem;
+    display: inline-block;
+    margin: 0.20rem 0.70rem;
+    color: #ffffff;
+    font-size: 0.20rem;
+    text-align: center;
+}
+.ShareListContainer>span>img{
+    width: 1.00rem;
+}
+.ShareListContainer>span>p{
+    margin-top: 0.20rem;
+}
+.ShareListContainer>div{
+    width: 2.76rem;
+    height: 0.66rem;
+    margin: 0 auto;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    text-align: center;
+    line-height: 0.66rem;
+    margin-top: 0.86rem;
+}
 
 
 
