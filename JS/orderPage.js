@@ -68,6 +68,11 @@
             $('.serverSettingContainer').css('display','none');
             $('.serverSetting').css('display','none');
         });
+
+        $('.cancelServer, .serverSettingTitel>img').on('click',function (e) {
+            $('.serverSettingContainer').css('display','none');
+            $('.serverSetting').css('display','none');
+        })
     }
 
     
