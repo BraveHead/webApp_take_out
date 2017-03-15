@@ -4,18 +4,13 @@
 (function () {
 
     /*加载初始状态*/
-    var shoppingContainer = document.getElementsByClassName('show_shopping_car_container');
-    var shoppingBottom = document.getElementsByClassName('shopping_car_bottom');
     $('.show_shopping_car_container').css('height',document.body.offsetHeight +"px") ;
-    // var arrClickedArr = ['Pictures/Pic/click_food/collection_dark.png','Pictures/Pic/click_food/red_stat.png'];
     var arrStat = ['Pictures/Pic/click_food/no_collection.png','Pictures/Pic/click_food/collection.png'];
     var arrStatCopy = ['Pictures/Pic/click_food/collection_dark.png',"Pictures/Pic/click_food/red_stat.png"];
     var shareArr = ['Pictures/Pic/header_icon/share.png',"Pictures/Pic/click_food/share_dark.png"];
     var backArr = ['Pictures/Pic/header_icon/back.png','Pictures/Pic/header_icon/back_gray.png'];
     var storage = window.sessionStorage;
-    var foodCount = 0;
     let allFoodItemCount;
-
 
     /*选择配送服务*/
     function choiceServer() {
@@ -127,7 +122,7 @@
     }
     /*更多优惠的点击显示*/
     function ShowSafe() {
-        var arrSrc= ['Pictures/Pic/click_food/safe_down.png','Pictures/Pic/click_food/safe_up.png'];
+        var arrSrc= ['Pictures/Pic/click_food/safe_up.png','Pictures/Pic/click_food/safe_down.png'];
         var index = 1;
         $(".safe_more").on('click',function (e) {
             index++;
@@ -139,7 +134,6 @@
         });
     }
     /*运用swiper来把点菜，评价，商家的各个模块同个tab的切换来实现衔接*/
-
     function switchTab() {
         var mySwiper = new Swiper('.swiper-container',{
         });
@@ -150,6 +144,15 @@
             $('.module_list_default').eq(listIndex).addClass("showBottomRed");
             mySwiper.slideTo(listIndex, 1000, false);//切换到第listIndex个slide，速度为1秒
         });
+        // module_list_default
+        setInterval(function () {
+            for(let i = 0; i < 3;i ++){
+                if($('.swiper-slide').eq(i).hasClass("swiper-slide-active")){
+                    $('.module_list_default').removeClass('showBottomRed');
+                    $('.module_list_default').eq(i).addClass("showBottomRed");
+                }
+            }
+        },100);
     }
     /*监听页面容器的滚动，产生变化*/
     function listenScrollBox() {
@@ -183,7 +186,6 @@
         })
 
     }
-
 
     /*获取各商品类型的点击切换效果并获取设置内容的高度*/   //切换的高度不对应,导致显示的view不一致
     function ClickTabViewContent() {
@@ -240,8 +242,6 @@
     $('.food_type_list_item').on('click',function (e) {
         $(this).addClass("showFoodListWhite").siblings().removeClass("showFoodListWhite");
     });
-
-
    /*购物车功能*/
    function ShoppingCar() {
        /*获取数据并存到本地*/
@@ -308,7 +308,6 @@
             }
 
        }
-
         /*添加事件*/
         let isChoiceServer = false;
        $('.add_count').on('click', function (){
@@ -316,7 +315,6 @@
                choiceServer();
                isChoiceServer = true;
            }
-
            let nowIndex = $(".add_count").index(this);
            let foodItem = JSON.parse(storage.getItem("foodItem"+nowIndex));
            let nowCount = foodItem.count;
@@ -383,7 +381,6 @@
                    $('.skuFoodHtml').css('display','none');
                    ShoppingBill();  //购物车总价与数量
                });
-
                /*点击确认，并保存sku的选择*/
                 $('.sure').one('click',function () {
                     let skuFoodCount = parseInt($('.skuFoodCount').text());
@@ -421,7 +418,6 @@
            let nowIndex = $('.reduce').index(this);
            let foodItem = JSON.parse(storage.getItem("foodItem"+nowIndex));
            let nowCount = foodItem.count;
-
            nowCount -= 1;
            foodItem.count = nowCount;
            storage.setItem('foodItem'+nowIndex, JSON.stringify(foodItem));
@@ -515,12 +511,14 @@
            let a = billPeace - 40;
            console.log(a);
            if(billPeace > 0){
-               $('.shopping_car_pic').attr('src','./Pictures/Pic/click_food/shoppingCar.png')
+               $('.shopping_car_pic').attr('src','./Pictures/Pic/click_food/shoppingCar.png');
+               $('.altogether').text("$"+ billPeace);
            }else{
                billPeace = 0;
-               $('.shopping_car_pic').attr('src','./Pictures/Pic/click_food/no_shopping.png')
+               $('.shopping_car_pic').attr('src','./Pictures/Pic/click_food/no_shopping.png');
+               $('.altogether').text("购物篮是空的");
            }
-           $('.altogether').text("$"+ billPeace);
+
            if(a >= 0){
                 $('.lack').text('结算支付').css('background-color','rgb(225,39,63)');
            }else{
