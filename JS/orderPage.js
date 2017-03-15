@@ -8,7 +8,8 @@
     var shoppingBottom = document.getElementsByClassName('shopping_car_bottom');
     $('.show_shopping_car_container').css('height',document.body.offsetHeight +"px") ;
     // var arrClickedArr = ['Pictures/Pic/click_food/collection_dark.png','Pictures/Pic/click_food/red_stat.png'];
-    var arrStat = ['Pictures/Pic/header_icon/no_collection.png','Pictures/Pic/click_food/collection_dark.png'];
+    var arrStat = ['Pictures/Pic/click_food/no_collection.png','Pictures/Pic/click_food/collection.png'];
+    var arrStatCopy = ['Pictures/Pic/click_food/collection_dark.png',"Pictures/Pic/click_food/red_stat.png"];
     var shareArr = ['Pictures/Pic/header_icon/share.png',"Pictures/Pic/click_food/share_dark.png"];
     var backArr = ['Pictures/Pic/header_icon/back.png','Pictures/Pic/header_icon/back_gray.png'];
     var storage = window.sessionStorage;
@@ -84,15 +85,27 @@
     /*点击收藏*/
     function Collection() {
         var statIndex = 0;
+        storage.setItem("statColor",'white');
         $('.order_collection').on('click',function (e) {
             statIndex++;
-            storage.setItem("clickedStat",'true');
-            arrStat[statIndex] = "Pictures/Pic/click_food/red_stat.png";
-            if(statIndex >= 2){
-                statIndex = 0;
-                storage.setItem("clickedStat",'false');
+            let src = $(this).attr("src");
+            switch(src){
+                case arrStat[0]:
+                    $(this).attr('src',arrStat[1]);
+                    break;
+                case arrStat[1]:
+                    $(this).attr('src',arrStat[0]);
+                    break;
+                case arrStatCopy[0]:
+                    $(this).attr('src',arrStatCopy[1]);
+                    break;
+                case arrStatCopy[1]:
+                    $(this).attr("src",arrStatCopy[0]);
+                    break;
+                default:
+                    alert("图片src有误");
             }
-            $(this).attr('src',arrStat[statIndex]);
+
         });
     }
     /*点击分享*/
@@ -147,21 +160,25 @@
            if(newScrollTop >= 20){
                 $('.order_food_header').addClass('headerTransform');
                 $('.order_back').attr('src',backArr[1]);
-                $('.order_collection').attr('src',arrStat[1]);
+                if( $('.order_collection').attr('src') == arrStat[1]){
+                    $('.order_collection').attr('src',arrStatCopy[1]);
+                }else{
+                    $('.order_collection').attr('src',arrStatCopy[0]);
+                }
                 $('.order_header_message_container').addClass('headerTransform showTransformHidden');
                 $('.businessItemName').css({'display':'block','color':'black'});
                 $('.order_share').attr("src",shareArr[1]);
-                arrStat[0] = 'Pictures/Pic/click_food/collection_dark.png';
            }else{
                $('.order_share').attr("src",shareArr[0]);
                $('.order_food_header').removeClass("headerTransform");
-               $('.order_back').attr('src',backArr[0]);
-               if(!storage.getItem("clickedStat")){
+               if($('.order_collection').attr('src') == arrStatCopy[1]){
+                   $('.order_collection').attr('src',arrStat[1]);
+               }else{
                    $('.order_collection').attr('src',arrStat[0]);
                }
+               $('.order_back').attr('src',backArr[0]);
                $('.order_header_message_container').removeClass('headerTransform showTransformHidden');
                $('.businessItemName').css({'display':'none','color':'black'});
-               arrStat[0] = 'Pictures/Pic/header_icon/no_collection.png';
            }
         })
 
