@@ -144,15 +144,20 @@
             $('.module_list_default').eq(listIndex).addClass("showBottomRed");
             mySwiper.slideTo(listIndex, 1000, false);//切换到第listIndex个slide，速度为1秒
         });
-        // module_list_default
-        setInterval(function () {
+         var setID = setInterval(function () {
             for(let i = 0; i < 3;i ++){
                 if($('.swiper-slide').eq(i).hasClass("swiper-slide-active")){
                     $('.module_list_default').removeClass('showBottomRed');
                     $('.module_list_default').eq(i).addClass("showBottomRed");
                 }
             }
-        },100);
+            if($('.module_list_default ').eq(0).hasClass("showBottomRed")){
+                $('.shopping_car_bottom').css('display','block');
+            }else{
+                $('.shopping_car_bottom').css('display','none');
+            }
+            console.log('>>>>>>>>>>');
+        },500);
     }
     /*监听页面容器的滚动，产生变化*/
     function listenScrollBox() {
@@ -536,7 +541,24 @@
        })
 
    }
+   /*评论模块*/
+   function commentModule() {
+       $('.choice_evaluate_container>img').on('click',function (e) {
+           if($('.choice_evaluate_container>img').attr("src") == "Pictures/Pic/evaluate/choice.png"){
+               $('.choice_evaluate_container>img').attr("src","Pictures/Pic/evaluate/no_choice.png");
+           }else{
+               $('.choice_evaluate_container>img').attr("src","Pictures/Pic/evaluate/choice.png");
+           }
+       });
 
+       $('.evaluate_context_right img').on('click',function (e) {
+           let nowIndex = $('.evaluate_context_right img').index(this);
+           $('.evaluate_context_right img').attr('src',"Pictures/Pic/evaluate/gray_star.png");
+           for(let i = 0; i < nowIndex; i ++){
+               $('.evaluate_context_right img').eq(i).attr('src',"Pictures/Pic/evaluate/yellow_star.png");
+           }
+       })
+   }
     /*商家模块的事件*/
     function BusinessTime() {
         var storage = window.sessionStorage;
@@ -558,6 +580,7 @@
         listenScrollBox();//监听页面容器的滚动变化
         ClickTabViewContent();//点左边切换到右边的商品详情
         ShoppingCar();//添加购物车
+        commentModule();//评论模块
         BusinessTime();//商家模块的事件点击
     }
 
