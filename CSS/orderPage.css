@@ -713,6 +713,7 @@ marquee{
     z-index: 8;
     width: 100%;
     display: none;
+    border-bottom: 0.26rem solid #f1f1f1;
 }
 
 .clear_shoppingCar_content{
@@ -736,6 +737,7 @@ marquee{
     height: 1.0rem;
     background-color: #fff;
     display: none;
+    border-bottom: 1px solid #d4d4d4;
 }
 .shopping_item_container{
     width: 6.9rem;
@@ -926,6 +928,7 @@ marquee{
 .flavorItemPic,.addDish{
     vertical-align: middle;
     margin-left: 0.3rem;
+    width: 0.32rem;
 }
 .flavorItemPic:hover,.addDish:hover{
     cursor: pointer;
@@ -1119,7 +1122,16 @@ marquee{
     margin-top: 0.86rem;
 }
 
-
+#addSkuFoodType{
+    line-height: 0.40rem;
+    color: darkgrey;
+    font-size: 0.22rem;
+}
+#newShoppingItemSpan{
+    display: block;
+    height: 0.70rem;
+    line-height: 0.70rem;
+}
 
 
 

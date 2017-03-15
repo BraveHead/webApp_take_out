@@ -279,6 +279,12 @@
                     $('.shopping_item').eq(i).css('display','block');
                     $('.reduceCar').eq(index).css('visibility','visible');
                     $('.numberCar').eq(index).css('visibility','visible').text(foodItemIndex.count);
+                    if(foodItem.sku == "1"){
+                        let str = foodItem.type + foodItem.addFood.split(" ");
+                        console.log(str);
+                        $('.shoppingItem_name').eq(i).html("<span id='newShoppingItemSpan'>"+ foodItem.foodItem +"</span>"+
+                        "<p id='addSkuFoodType'>"+ str +"</p>");
+                    }
                 }else{
                     $('.shopping_item').eq(i).css('display','none');
                 }
@@ -337,7 +343,24 @@
                    }
                    $('.skuFoodCount').text(skuFoodCount);
                });
-
+               /*sku商品的选择口味*/
+               $('.flavorItemPic').on("click",function (e) {
+                   let nowIndex = $(".flavorItemPic").index(this);
+                   let picSrc = $('.flavorItemPic').eq(nowIndex).attr('src');
+                   if(picSrc == 'Pictures/Pic/skuFood/noClickedRound.png'){
+                       $(".flavorItemPic").attr('src',"Pictures/Pic/skuFood/noClickedRound.png").
+                       eq(nowIndex).attr('src','Pictures/Pic/skuFood/clickedRound.png');
+                   }
+               });
+               $('.addDish').on('click',function (e) {
+                   let nowIndex = $(".addDish").index(this);
+                   let picSrc = $('.addDish').eq(nowIndex).attr('src');
+                   if(picSrc == 'Pictures/Pic/skuFood/noClickedSquare.png'){
+                       $(".addDish").eq(nowIndex).attr('src','Pictures/Pic/skuFood/clickedSquare.png');
+                   }else{
+                       $(".addDish").eq(nowIndex).attr('src','Pictures/Pic/skuFood/noClickedSquare.png');
+                   }
+               });
                /*点击取消，不保存sku选项*/
                $('.timeHeaderBackMessage').on('click',function () {
                    $('.skuFoodHtml').css('display','none');
@@ -348,6 +371,18 @@
                 $('.sure').one('click',function () {
                     let skuFoodCount = parseInt($('.skuFoodCount').text());
                     foodItem.count = skuFoodCount;
+                    foodItem['addFood'] = "";
+                    $('.addDish').off("click");
+                    for(let i= 0; i < $('.flavorItemPic').length;i++){
+                        if($('.flavorItemPic').eq(i).attr('src') == "Pictures/Pic/skuFood/clickedRound.png"){
+                            foodItem['type'] = $('.flavorItemPic').eq(i).siblings().text();
+                        }
+                    }
+                    for(let i= 0; i < $('.addDish').length;i++){
+                        if($('.addDish').eq(i).attr('src') == "Pictures/Pic/skuFood/clickedSquare.png"){
+                            foodItem['addFood'] += " "+$('.addDish').eq(i).siblings().text();
+                        }
+                    }
                     storage.setItem('foodItem'+ nowIndex, JSON.stringify(foodItem));
                     $('.skuFoodHtml').css('display','none');
 
