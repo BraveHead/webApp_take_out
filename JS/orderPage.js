@@ -191,16 +191,12 @@
         })
 
     }
-
     /*获取各商品类型的点击切换效果并获取设置内容的高度*/   //切换的高度不对应,导致显示的view不一致
     function ClickTabViewContent() {
         window.onload = function () {
-
             var foodTypeName = document.getElementsByClassName('food_type_list_item');
             var foodName = document.querySelectorAll(".food_list_item");
-            var foodNameContainer = document.querySelector('.food_list_item_container ul');
             var foodContainerTop = 0;
-            var prev = 0;
             var next ;
             var addNext = 0;
             if(foodTypeName){
