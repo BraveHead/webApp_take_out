@@ -126,9 +126,12 @@ body{
     margin-top: 0.30rem;
 
 }
+<<<<<<< HEAD
 .Delivery_address_selection_container b{
     color: rgb(60,60,60);
 }
+=======
+>>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
 .address_clicked{
     height: 0.32rem;
     /*position: absolute;*/
@@ -321,6 +324,7 @@ body{
         height: auto;
     }
 
+<<<<<<< HEAD
 /*搜索地址*/
 .peiSongQuYu{
     position: absolute;
@@ -376,6 +380,9 @@ body{
     color: rgb(83,83,83);
     font-weight: 700;
 }
+=======
+
+>>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
 
 
 

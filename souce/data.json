@@ -1,4 +1,5 @@
 {"foodData":[
+<<<<<<< HEAD
   {"foodItem":"春卷","peace":"$22","sku":"0","count":0},
   {"foodItem":"麻瓜","peace":"$25","sku":"1","count":0},
   {"foodItem":"黄瓜","peace":"$24","sku":"0","count":0},
@@ -10,6 +11,19 @@
   {"foodItem":"一点不好","peace":"$34","sku":"1","count":0},
   {"foodItem":"都好","peace":"$12","sku":"0","count":0},
   {"foodItem":"真的不好","peace":"$23","sku":"1","count":0}
+=======
+  {"foodItem":"春卷","peace":"$22"},
+  {"foodItem":"麻瓜","peace":"$25"},
+  {"foodItem":"黄瓜","peace":"$24"},
+  {"foodItem":"小菜","peace":"$22"},
+  {"foodItem":"肉类","peace":"$11"},
+  {"foodItem":"视屏","peace":"$34"},
+  {"foodItem":"好吃的","peace":"$24"},
+  {"foodItem":"不好吃的","peace":"$14"},
+  {"foodItem":"一点不好","peace":"$34"},
+  {"foodItem":"都好","peace":"$12"},
+  {"foodItem":"真的不好","peace":"$23"}
+>>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
   ]
 }
 

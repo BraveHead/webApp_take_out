@@ -4,11 +4,14 @@
 /*外卖首页列表*/
 (function () {
 
+<<<<<<< HEAD
     /*返回上一页*/
     $('.back').on('click',function (e) {
        window.history.back();
     });
 
+=======
+>>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
     /*首页切换商家在线状态和商家列表对应显示*/
     $(".Selection_mode a").eq(0).addClass("selection_mode_now").css('color','rgb(255,255,255)');
 
@@ -21,6 +24,14 @@
         $(".distribution_list").eq(index).addClass('show').siblings().removeClass("show");
 
     });
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
     /*首页切换各类型餐馆的列表*/
     $('.category').on('click',function (e) {
         // var index1 = $(this).index(this);
@@ -32,6 +43,35 @@
         $(".show>.business_container").eq(index).addClass("show").siblings().removeClass("show");
     });
 
+<<<<<<< HEAD
+=======
+    /*拖动餐厅列表*/
+
+   /* var moveEvent = document.getElementsByClassName("selection_type_scroll");
+    console.log(moveEvent);
+    moveEvent.addEventListener("mousedown",function (e) {
+
+        var clientDownX = e.clientLeft;
+        console.log(clientDownX);
+        var clientMoveX;
+        moveEvent.addEventListener("mousemove",function (e) {
+
+            clientMoveX = e.clientLeft;
+        });
+        moveEvent.addEventListener("mouseup",function (e) {
+
+            moveEvent.left= clientMoveX -clientDownX +"px";
+        })
+
+
+    });*/
+
+
+
+
+
+
+>>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
     /*点击排序方法*/
         /*点击下拉*/
 
@@ -50,6 +90,7 @@
             $(".sort>img").attr('src',"Pictures/Pic/header_icon/sort_gray.png");
         }).removeClass("show");
     });
+<<<<<<< HEAD
 
     /*搜索地址*/
     $('.searchInputCheck').on('input propertychange',function (e) {
@@ -77,4 +118,11 @@
 
 
 
+=======
+        /*点击弹回*/
+   /* $('.sort_back').on("click",function (e) {
+
+        console.log('123');
+    });*/
+>>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
 })();

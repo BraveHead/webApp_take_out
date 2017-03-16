@@ -1,6 +1,10 @@
 /*点菜界面的头部返回，收藏和分享*/
 body{
+<<<<<<< HEAD
     background-color: #e5233f;
+=======
+    background-color: rgb(255,193,60);
+>>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
     overflow: hidden;
 }
 .new{
@@ -13,7 +17,11 @@ body{
 
 .order_food_header{
     width: 100%;
+<<<<<<< HEAD
     background-color: #e5233f;
+=======
+    background-color: rgb(255,193,60);
+>>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
     position: fixed;
     z-index: 5;
 }
@@ -23,7 +31,11 @@ body{
 }
 @keyframes headerChangeColor {
     0%{
+<<<<<<< HEAD
         background-color: #e5233f;
+=======
+        background-color: rgb(255,193,60);
+>>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
     }
     100%{
         background-color: #ffffff;
@@ -31,7 +43,11 @@ body{
 }
 @-moz-keyframes headerChangeColor {
     from{
+<<<<<<< HEAD
         background-color: #e5233f;
+=======
+        background-color: rgb(255,193,60);
+>>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
     }
     to{
         background-color: rgb(255,0,0);
@@ -83,7 +99,11 @@ body{
 }
 .businessItemName{
     position: absolute;
+<<<<<<< HEAD
     top: 0.32rem;
+=======
+    top: 0.4rem;
+>>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
     font-size: 0.28rem;
     font-weight: bolder;
     color: #ffffff;
@@ -92,6 +112,7 @@ body{
 }
 .order_collection{
     position: absolute;
+<<<<<<< HEAD
     top:0.15rem;
     height: 0.64rem;
     left: 5.6rem;
@@ -100,6 +121,16 @@ body{
     width: 0.35rem;
     position: absolute;
     top: 0.15rem;
+=======
+    top:0.25rem;
+    height: 0.64rem;
+    left: 5.8rem;
+}
+.order_share{
+    width: 0.32rem;
+    position: absolute;
+    top: 0.23rem;
+>>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
     right: 0;
 }
 
@@ -114,7 +145,11 @@ body{
 }
 .order_header_message_container{
     width: 100%;
+<<<<<<< HEAD
     background-color: #e5233f;
+=======
+    background-color: rgb(255,193,60);
+>>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
     overflow: hidden;
     display: block;
 }
@@ -574,12 +609,18 @@ marquee{
 
     /*地址，联系方式等等的共同样式*/
     .same_type_container{
+<<<<<<< HEAD
         display: block;
+=======
+>>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
         width: 7.5rem;
         height: 0.85rem;
         border-bottom: 1px solid rgb(241,241,241);
         background-color: #fff;
+<<<<<<< HEAD
         color: rgb(60,60,60);
+=======
+>>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
     }
     .same_type{
         width: 6.9rem;
@@ -680,7 +721,10 @@ marquee{
     font-weight: bolder;
 }
 .lack{
+<<<<<<< HEAD
     display: block;
+=======
+>>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
     float: left;
     width: 2.7rem;
     height: 0.97rem;
@@ -713,7 +757,10 @@ marquee{
     z-index: 8;
     width: 100%;
     display: none;
+<<<<<<< HEAD
     border-bottom: 0.26rem solid #f1f1f1;
+=======
+>>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
 }
 
 .clear_shoppingCar_content{
@@ -737,7 +784,10 @@ marquee{
     height: 1.0rem;
     background-color: #fff;
     display: none;
+<<<<<<< HEAD
     border-bottom: 1px solid #d4d4d4;
+=======
+>>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
 }
 .shopping_item_container{
     width: 6.9rem;
@@ -791,6 +841,7 @@ marquee{
     right: 0;
 }
 
+<<<<<<< HEAD
 /*skuFood界面*/
 .skuFoodHtml{
     background-color: rgb(241,241,241);
@@ -1132,6 +1183,16 @@ marquee{
     height: 0.70rem;
     line-height: 0.70rem;
 }
+=======
+
+
+
+
+
+
+
+
+>>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
 
 
 
