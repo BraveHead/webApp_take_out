@@ -1,7 +1,6 @@
-body{
-    background-color: rgb(241,241,241);
-    font-size: 0.28rem;
-    color: rgb(60,60,60);
+.skuFoodHtml{
+    max-width: 640px;
+    margin: 0 auto;
 }
 /*time头部*/
 .TimeHeaderContainer{

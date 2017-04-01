@@ -10,6 +10,15 @@
         })
     }
 
+    /*选择地址*/
+    function choiceAddress() {
+        $(".xuanZhong").eq(0).css("display","inline-block");
+        $(".addAddressItemContainer").on("click",function () {
+            let nowIndex = $(".addAddressItemContainer").index(this);
+            $(".xuanZhong").css("display",'none').eq(nowIndex).css("display","inline-block");
+        })
+    }
+
     let payTypeArr = ['../Pictures/Pic/orderSettle/noClickedType.png','../Pictures/Pic/orderSettle/clickedType.png'];
     let btnToggleArr = ['../Pictures/Pic/orderSettle/btn_toggle_n.png','../Pictures/Pic/orderSettle/btn_toggle_s.png'];
 
@@ -85,6 +94,7 @@
 
     function init() {
         orderSettleBack();//返回上一页
+        choiceAddress();//选择地址
         choicePayType();//选择不同的支付方式
         clickedToggle();//选择优惠是否
         addCoupon(); //点击添加优惠券

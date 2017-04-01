@@ -1,19 +1,45 @@
 /*共有的样式*/
-
-
-html,body{}
-
 *{
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
     text-decoration: none;
 }
-
 body{
+    max-width: 640px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
     font-size: 0.28rem;
-    height: 100%;
-    overflow: hidden;
-    overflow-y: auto;
+    font-family: "MicroSoft YaHei",sans-serif;
+    color: #3c3c3c;
+}
+a:hover ,
+a:focus ,
+a:active {
+    text-decoration: none;
+    outline: 0;
+}
+input{
+    border: none;
+    outline: none;
+   /* 清除移动端默认的表单样式*/
+-webkit-appearance: none;
+}
+ul,ol{
+    list-style: none;
+}
+/*清除浮动*/
+.clear::before,
+.clear::after{
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
 }
 
 ::-webkit-scrollbar{
@@ -41,15 +67,14 @@ body{
 .border_bottom_gray{
     border-bottom: 1px solid rgb(215,215,215);
 }
-ul li{
-    list-style-type: none;
-}
+
 .show{
     display: block;
 }
 .hidden{
     display: none;
 }
+
 
 
 

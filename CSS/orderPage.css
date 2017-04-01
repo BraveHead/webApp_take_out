@@ -1,29 +1,27 @@
 /*点菜界面的头部返回，收藏和分享*/
 body{
-<<<<<<< HEAD
-    background-color: #e5233f;
-=======
-    background-color: rgb(255,193,60);
->>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 0 auto;
+    max-width: 640px;
 }
 .new{
-    width: 100%;
-    overflow: auto;
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
+    overflow: auto;
+    max-width: 640px;
+    margin: 0 auto;
+    overflow-y: scroll;
 }
 
 .order_food_header{
     width: 100%;
-<<<<<<< HEAD
     background-color: #e5233f;
-=======
-    background-color: rgb(255,193,60);
->>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
     position: fixed;
     z-index: 5;
+    max-width: 640px;
 }
     /*头部滚动的切换效果*/
 .headerTransform{
@@ -31,11 +29,7 @@ body{
 }
 @keyframes headerChangeColor {
     0%{
-<<<<<<< HEAD
         background-color: #e5233f;
-=======
-        background-color: rgb(255,193,60);
->>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
     }
     100%{
         background-color: #ffffff;
@@ -43,11 +37,7 @@ body{
 }
 @-moz-keyframes headerChangeColor {
     from{
-<<<<<<< HEAD
         background-color: #e5233f;
-=======
-        background-color: rgb(255,193,60);
->>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
     }
     to{
         background-color: rgb(255,0,0);
@@ -65,27 +55,6 @@ body{
         height: 0;
     }
 }
-
-/*.showTransformShow{
-    animation: hiddenToShow 2s forwards;
-}
-@keyframes hiddenToShow {
-    from{
-        height: 0;
-    }
-    to{
-        height: 1.35rem;
-    }
-}
-@-moz-keyframes hiddenToShow {
-    from{
-        height: 0;
-    }
-    to{
-        height: 1.35rem;
-    }
-}*/
-
 .order_header_nav{
     width: 6.9rem;
     height: 0.89rem;
@@ -99,12 +68,8 @@ body{
 }
 .businessItemName{
     position: absolute;
-<<<<<<< HEAD
-    top: 0.32rem;
-=======
-    top: 0.4rem;
->>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
-    font-size: 0.28rem;
+    top: 0.28rem;
+    font-size: 0.34rem;
     font-weight: bolder;
     color: #ffffff;
     left: 3rem;
@@ -112,7 +77,6 @@ body{
 }
 .order_collection{
     position: absolute;
-<<<<<<< HEAD
     top:0.15rem;
     height: 0.64rem;
     left: 5.6rem;
@@ -121,16 +85,6 @@ body{
     width: 0.35rem;
     position: absolute;
     top: 0.15rem;
-=======
-    top:0.25rem;
-    height: 0.64rem;
-    left: 5.8rem;
-}
-.order_share{
-    width: 0.32rem;
-    position: absolute;
-    top: 0.23rem;
->>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
     right: 0;
 }
 
@@ -140,16 +94,13 @@ body{
     background-color: rgb(241,241,241);
     position: relative;
     /*top: 0.89rem;*/
-    top: 0.89rem;
-    overflow-y: hidden;
+    top: 0.87rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 .order_header_message_container{
     width: 100%;
-<<<<<<< HEAD
     background-color: #e5233f;
-=======
-    background-color: rgb(255,193,60);
->>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
     overflow: hidden;
     display: block;
 }
@@ -171,44 +122,37 @@ body{
     .order_header_message_right{
         float: left;
         width: 5.58rem;
+        color: #fdfdfd;
     }
     .order_message_name{
         width: 100%;
         height: 0.29rem;
-        font-size:0.28rem;
-        font-weight: bolder;
-        color: rgb(253,253,253);
+        font-size:0.32rem;
     }
     .order_message_type{
         width: 100%;
         height: 0.6rem;
-        font-size:0.26rem;
+        font-size:0.24rem;
         text-align: left;
-        color: rgb(253,253,253);
-        line-height: 0.6rem;
+        line-height: 0.70rem;
     }
     .order_message_safe{
         width: 100%;
         height: 0.38rem;
         position: relative;
+        font-size: 0.24rem;
     }
     .safe_logo{
         width: 0.24rem;
         vertical-align: middle;
     }
     .safe_message{
-        font-size: 0.22rem;
         vertical-align: middle;
-        color: rgb(253,253,253);
         width: 3.5rem;
         overflow: hidden;
     }
     .safe_more{
-        /*position: absolute;*/
-        /*right: 0;*/
-        margin-left: 0.3rem;
-        color: rgb(253,253,253);
-        font-size: 0.22rem;
+        margin-left: 0.25rem;
         vertical-align: middle;
     }
     .safe_more:hover{
@@ -220,11 +164,12 @@ body{
     }
     .order_message_safe_hidden{
         display: none;
+        padding-bottom: 0.12rem;
     }
     .order_message_safe_hidden>p{
-        font-size:0.22rem;
-        margin-left: 0.36rem;
-        color: rgb(253,253,253);
+        font-size:0.24rem;
+        color: #fdfdfd;
+        display:inline-block;
     }
 
 /*滚动文字的区域*/
@@ -247,9 +192,10 @@ body{
 }
 marquee{
     position: absolute;
+    font-size: 0.24rem;
     left: 0.4rem;
     top: 0.18rem;
-    color: rgb(60,60,60);
+    color: #3c3c3c;
     font-weight: bold;
 }
 
@@ -261,13 +207,17 @@ marquee{
     overflow-y: hidden;
 }
 .business_module_container{
-    display: -webkit-flex; /* Safari */
-    display: flex;
-    /*flex-direction:column;*/
+    width: 100%;
     height: 0.83rem;
+    color: #777777;
+    border-bottom: 0.01rem solid #d7d7d7;
 }
 .business_module_container>a{
-    color: rgb(190,190,190);
+    color: #777777;
+    display: inline-block;
+    width: 33.3%;
+    float: left;
+    text-align: center;
 }
 
 .module_list_default {
@@ -275,10 +225,11 @@ marquee{
     border-bottom: 0.04rem solid #ffffff;
     position: relative;
     top: 0.2rem;
+
 }
 .showBottomRed{
-    border-bottom: 4px solid rgb(229,35,63);
-    color: black;
+    border-bottom: 0.04rem solid #e5233f;
+    color: #3c3c3c;
 }
     /*模块的内容列表*/
     .swiper-container{
@@ -293,6 +244,8 @@ marquee{
         width: 1.78rem;
         float: left;
         background-color: rgb(241,241,241);
+        /*height: 13.0rem;*/
+        color: #777777;
     }
     .food_type_list_container>ul{
         overflow-y: auto;
@@ -307,11 +260,12 @@ marquee{
         margin-left: 0.3rem;
     }
     .showFoodListWhite{
-        background-color: #fff;
+        background-color: rgb(241,241,241);
     }
-
-
-
+    .showFoodListWhited{
+        background-color: #fff;
+        color: #e5233f;
+    }
     /*各type下的商品种类*/
 
     .food_list_item_container{
@@ -320,7 +274,7 @@ marquee{
         float: left;
         margin-left: 0.2rem;
         background-color: #ffffff;
-        /*height: 9.0rem;*/
+        height:11.0rem;
     }
     .food_list_item_container ul{
         height: auto;
@@ -328,9 +282,10 @@ marquee{
         overflow-y: auto;
     }
     .food_list_item_ul{
-        height: 10.0rem;
+        /*height: 13.0rem;*/
         overflow-y: auto;
         position: relative;
+        color: #3c3c3c;
     }
     .food_list_item{
         /*overflow-y: auto;*/
@@ -340,67 +295,74 @@ marquee{
     .food_list_item_typeName{
         width: 100%;
         height: 0.67rem;
-        border-bottom: 1px dashed darkgray;
+        border-bottom: 0.01rem dashed #d7d7d7;
         line-height:0.67rem;
+        color: #777777;
+        font-size: 0.24rem;
     }
     .food_list_item_typeName>span{
         margin-left: 0.14rem;
     }
     .food_list_item_foodName{
         width: 100%;
-        height: 1.2rem;
-        padding: 0.2rem 0;
+        height: 1.0rem;
+        margin-top: 0.2rem;
+        margin-bottom:0.4rem;
+        overflow: hidden;
     }
     .foodName_left{
         float: left;
-        width: 1.2rem;
+        width: 1.50rem;
+        height: 1.0rem;
     }
     .foodName_right{
         float: left;
         margin-left: 0.2rem;
-        width:3.82rem ;
+        width:3.52rem ;
+        height: 1.0rem;
     }
     .foodName_right_message{
         font-size: 0.28rem;
-        font-weight: bold;
         overflow: hidden;
         white-space:nowrap;
         text-overflow:ellipsis;
         height: 0.46rem;
         line-height: 0.46rem;
+        color: #3c3c3c;
     }
     .foodName_right_add{
         width: 100%;
-        height: 0.74rem;
+        height: 0.54rem;
         position: relative;
     }
     .now_peace{
         position: absolute;
         color: rgb(225,39,63);
-        font-size: 0.34rem;
-        font-weight: bolder;
+        font-size: 0.28rem;
         left: 0;
+        top: 0.24rem;
     }
     .order_peace{
         position: absolute;
-        color: darkgray;
-        margin-left: 0.14rem;
-        font-size: 0.24rem;
+        color: #777777;
+        margin-left: 0.04rem;
+        font-size: 0.22rem;
         text-decoration: line-through;
         left: 0.6rem;
-        top: 0.12rem;
+        top: 0.26rem;
     }
     .reduce{
         position: absolute;
         width: 0.5rem;
         visibility: hidden;
-        left: 2.3rem;
+        left: 2.05rem;
 
     }
     .now_count{
         position: absolute;
-        color: rgb(60,60,60);
-        left: 3.0rem;
+        color: #3c3c3c;
+        font-size: 0.28rem;
+        left: 2.71rem;
         top: 0.12rem;
         visibility: hidden;
     }
@@ -411,11 +373,12 @@ marquee{
     }
     .right_add_container{
         position: absolute;
-        top: 0.24rem;
         width: 100%;
+        height: 0.54rem;
     }
     .right_add_container_relative{
         position: relative;
+        height: 0.50rem;
     }
 
 
@@ -430,7 +393,7 @@ marquee{
     background-image: url('../Pictures/Pic/evaluate/evaluate_background.png');
     background-size: 7.5rem 1.5rem;
     background-repeat: no-repeat;
-    border-bottom: 0.2rem solid rgb(241,241,241);
+    border-bottom: 0.2rem solid #f1f1f1;
 }
 .evaluate_background>div{
     width: 2.06rem;
@@ -442,17 +405,19 @@ marquee{
     width: 100%;
     height: 0.76rem;
     background-image: url('../Pictures/Pic/evaluate/sort_background.png');
+    background-repeat: no-repeat;
     background-size: 1.56rem 0.74rem;
     background-position: center;
     text-align: center;
 }
 .evaluate_sort>b{
-    font-size: 0.4rem;
+    font-size: 0.48rem;
     color: #ffffff;
     line-height: 0.76rem;
+    font-weight: 500;
 }
 .evaluate_sort>span{
-    font-size: 0.24rem;
+    font-size: 0.30rem;
     color: #ffffff;
     line-height: 0.76rem;
 }
@@ -464,17 +429,20 @@ marquee{
     line-height: 0.32rem;
     color: #ffffff;
     font-size: 0.2rem;
-    border-radius: 0.12rem;
+    border-radius: 0.16rem;
 }
     /*选择评价类型*/
     .choice_evaluate{
         width: 100%;
-        height:0.79rem;
-        border-bottom: 1px solid rgb(241,241,241);
+        height:0.78rem;
+        border-bottom: 0.01rem solid #d7d7d7;
+        color: #777777;
+        overflow: hidden;
     }
     .choice_evaluate_container{
         width: 6.9rem;
         margin: 0 auto;
+        height: 0.79rem;
     }
     .choice_evaluate_container>img{
         width: 0.3rem;
@@ -484,16 +452,26 @@ marquee{
     .choice_evaluate_container>span{
         vertical-align: middle;
         line-height: 0.79rem;
-        color: rgb(190,190,190);
     }
 
     /*评价内容*/
     .evaluate_content{
         width: 100%;
-        border-bottom: 1px solid rgb(241,241,241);
-        overflow-y: auto;
+        color: #777777;
+    }
+    .evaluate_content>div{
+        width: 100%;
+        height: auto;
+    }
+    .evaluate_content_bus{
+        border-bottom:0.01rem solid #d7d7d7;
     }
     .evaluate_content_container{
+        width: 7.5rem;
+        max-width: 640px;
+        border-bottom: 0.01rem solid #d7d7d7;
+    }
+    .evaluate_content_container>div{
         width: 6.9rem;
         margin: 0 auto;
     }
@@ -509,7 +487,8 @@ marquee{
     .evaluate_context_right{
         float: left;
         width: 5.9rem;
-        padding: 0.2rem 0;
+        padding-top: 0.20rem;
+        padding-bottom: 0.02rem;
     }
     .customer_id{
         position: relative;
@@ -527,28 +506,32 @@ marquee{
         right: 0;
         color: rgb(119,119,119);
     }
+    .customer_id>time{
+        font-size: 0.22rem;
+    }
     .customer_id>span>img{
         width: 0.26rem;
+        margin-right: 0.04rem;
     }
     .context_message{
         width: 100%;
-        margin-top: 0.66rem;
+        margin-top: 0.46rem;
+        color: #777777;
     }
     .context_message>span{
-
         font-size: 0.26rem;
-        color: rgb(86,86,86);
-
+        color: #3c3c3c;
     }
     .context_message>time{
         display: block;
-        font-size: 0.2rem;
-        color: rgb(119,119,119);
-        padding: 0.3rem 0;
+        font-size: 0.22rem;
+        padding-top: 0.20rem;
+        padding-bottom: 0.26rem;
+        color: #777777;
     }
     /*商家回复*/
     .evaluate_context{
-        margin-left: 1.0rem;
+       float: right;
     }
     .business_evaluate_left{
         width: 0.86rem;
@@ -569,11 +552,11 @@ marquee{
     .business_center_logo_container{
         width: 7.5rem;
         height: 1.75rem;
-        border-top: 1px solid rgb(119,119,119);
     }
     .business_center_logo{
         width: 6.9rem;
         height: 1.75rem;
+        margin: 0 auto;
     }
     .logo_message{
         display: block;
@@ -581,21 +564,20 @@ marquee{
         height: 0.8rem;
         margin: 0 auto;
         background-color: #ffffff;
-        border-radius: 0.36rem;
+        border-radius: 0.40rem;
         text-align: center;
-        line-height: 0.8rem;
+        line-height: 0.74rem;
         position: relative;
         top: 0.22rem;
-        border: 1px solid rgba(119,119,119,0.5);
+        border: 0.01rem solid #d7d7d7;
     }
     .logo_message>img{
         width: 0.6rem;
         vertical-align: middle;
     }
     .logo_message>span{
-        color: rgb(60,60,60);
+        color: #3c3c3c;
         font-size: 0.30rem;
-        font-weight:bolder;
         vertical-align: middle;
     }
     .describe_logo{
@@ -603,42 +585,55 @@ marquee{
         text-align: center;
         position: relative;
         top: 0.4rem;
-        font-weight: bold;
-        color: rgb(60,60,60);
+        color: #3c3c3c;
+        height: 0.28rem;
+        display: block;
+    }
+    .describe_logo span{
+        position: absolute;
+        left: 1.48rem;
+    }
+    .div-line1, .div-line2{
+        position: absolute;
+        width: 0.25rem;
+        height: 0.02rem;
+        background-color: #aaaaaa;
+        display: inline-block;
+        top: 0.16rem;
+    }
+    .div-line1{
+        left: 1.14rem;
+    }
+    .div-line2{
+        left: 5.70rem;
     }
 
     /*地址，联系方式等等的共同样式*/
     .same_type_container{
-<<<<<<< HEAD
         display: block;
-=======
->>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
         width: 7.5rem;
-        height: 0.85rem;
-        border-bottom: 1px solid rgb(241,241,241);
+        border-bottom: 1px solid #d7d7d7;
         background-color: #fff;
-<<<<<<< HEAD
-        color: rgb(60,60,60);
-=======
->>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
+        color: #3c3c3c;
     }
     .same_type{
         width: 6.9rem;
-        height: 100%;
+        height: 0.86rem;
         margin: 0 auto;
     }
     .same_type>p {
         width: 100%;
         display: inline-block;
-        padding: 0.245rem 0;
+        padding-top: 0.25rem;
+        padding-bottom:0.37rem;
     }
     .same_type>p>span{
         vertical-align: middle;
         font-size: 0.28rem;
-        font-weight: 500;
+        line-height: 0.32rem;
     }
     .phone_number{
-        height: 0.36rem;
+        height: 0.32rem;
         vertical-align: middle;
     }
     .point{
@@ -649,6 +644,7 @@ marquee{
     }
     .dif_type_container{
         border-bottom: 0.14rem solid rgb(241,241,241);
+        /*padding-bottom:0.12rem ;*/
     }
     .business_sale_message_container{
         width: 100%;
@@ -661,28 +657,30 @@ marquee{
     .business_server{
         padding: 0.2rem 0;
         font-size: 0.28rem;
+        color: #3c3c3c;
         font-weight: 500;
-    }
-    .business_server_message{
-        padding: 0.04rem 0 0.20rem 0;
     }
     .business_server_message>img{
         width: 0.24rem;
+        vertical-align: middle;
     }
     .business_server_message>span{
         font-size: 0.24rem;
-        color: black;
+        color: #3c3c3c;
+        vertical-align: middle;
     }
 
 
 /*购物车*/
 .shopping_car_bottom{
     width: 100%;
+    max-width: 640px;
     position: fixed;
     bottom: 0;
     height: 0.97rem;
     z-index: 10;
     background-color: #fff;
+    border-top: 0.01rem solid #d7d7d7;
 }
 .shopping_car_container{
     float: left;
@@ -721,10 +719,7 @@ marquee{
     font-weight: bolder;
 }
 .lack{
-<<<<<<< HEAD
     display: block;
-=======
->>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
     float: left;
     width: 2.7rem;
     height: 0.97rem;
@@ -757,10 +752,7 @@ marquee{
     z-index: 8;
     width: 100%;
     display: none;
-<<<<<<< HEAD
     border-bottom: 0.26rem solid #f1f1f1;
-=======
->>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
 }
 
 .clear_shoppingCar_content{
@@ -784,10 +776,7 @@ marquee{
     height: 1.0rem;
     background-color: #fff;
     display: none;
-<<<<<<< HEAD
-    border-bottom: 1px solid #d4d4d4;
-=======
->>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
+    border-bottom: 0.01rem solid #d7d7d7;
 }
 .shopping_item_container{
     width: 6.9rem;
@@ -841,16 +830,16 @@ marquee{
     right: 0;
 }
 
-<<<<<<< HEAD
 /*skuFood界面*/
 .skuFoodHtml{
     background-color: rgb(241,241,241);
     font-size: 0.28rem;
-    color: rgb(60,60,60);
+    color: #3c3c3c;
     position: absolute;
     z-index: 99;
     width:100% ;
     display: none;
+    max-width: 640px;
 }
 /*time头部*/
 .TimeHeaderContainer{
@@ -952,7 +941,7 @@ marquee{
 }
 .skuFoodPeace{
     position: absolute;
-    left: 0rem;
+    left: 0;
     top:0.1rem;
     visibility: visible;
 }
@@ -992,12 +981,15 @@ marquee{
 /*选择配送服务方式*/
 
 .serverSettingContainer{
+    position: fixed;
+    top: 0;
+    max-width: 640px;
     width: 100%;
     background-color:#000;
     filter:alpha(opacity=60);  /*设置透明度为60%*/
     opacity:0.6;  /*非IE浏览器下设置透明度为60%*/
     z-index: 50;
-    position: absolute;
+
     display: none;
     color: black;
 }
@@ -1005,8 +997,7 @@ marquee{
     background-color: rgb(255,255,255);
     width: 6.90rem;
     line-height: 100%;
-    position: absolute;
-    left: 0.30rem;
+    position: fixed;
     z-index: 51;
     display: none;
 }
@@ -1038,7 +1029,8 @@ marquee{
 .serverSettingType{
     width: 100%;
     height: 0.89rem;
-    border-bottom: 1px solid darkgrey;
+    border-bottom: 0.01rem solid #d7d7d7;
+    line-height: 0.89rem;
 }
 .serverSettingType>div{
     float: left;
@@ -1047,10 +1039,13 @@ marquee{
 }
 .serverSettingType>div>img{
     width: 0.38rem;
-    vertical-align: middle;
+    height: 0.36rem;
+    position: relative;
     margin-left: 0.36rem;
+    vertical-align: middle;
 }
 .serverSettingType>div>span{
+    position: relative;
     vertical-align: middle;
 }
 .serverSettingItemContainer{
@@ -1064,6 +1059,7 @@ marquee{
 .serverSettingItem>div{
     height: 0.89rem;
     line-height: 0.89rem;
+    border-bottom: 0.01rem solid #d7d7d7;
 }
 .serverSettingItem>div>span{
     margin-left: 0.30rem;
@@ -1085,11 +1081,12 @@ marquee{
     height: 0.90rem;
     position: relative;
 }
+
 .cancelServer{
     width: 1.38rem;
     height: 0.50rem;
-    border: 2px solid rgb(229,30,59);
-    border-radius: 0.20rem;
+    border: 0.01rem solid rgb(229,30,59);
+    border-radius: 0.25rem;
     display: block;
     text-align: center;
     line-height: 0.50rem;
@@ -1099,12 +1096,12 @@ marquee{
 .sureServer{
     width: 1.38rem;
     height: 0.50rem;
-    border: 2px solid rgb(229,30,59);
+    border: 0.01rem solid rgb(229,30,59);
     background-color: rgb(229,30,59);
-    border-radius: 0.20rem;
+    border-radius: 0.25rem;
     display: block;
     text-align: center;
-    line-height: 0.50rem;
+    line-height: 0.48rem;
     position: absolute;
     right: 1.02rem;
     color: rgb(255,255,255);
@@ -1112,10 +1109,12 @@ marquee{
 .regionListContainer{
     background-color: rgb(255,255,255);
     width: 6.90rem;
-    position: absolute;
-    left: 0.30rem;
-    z-index: 52;
+    position: fixed;
+    z-index: 101;
     display: none;
+    max-height: 300px;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 .regionListContainer>div{
     width: 100%;
@@ -1129,9 +1128,9 @@ marquee{
 }
 .regionListContainer li{
     width: 100%;
-    height: 0.69rem;
-    border-bottom: 1px solid darkgrey;
-    line-height: 0.69rem;
+    height: 0.88rem;
+    border-bottom: 0.01rem solid #d7d7d7;
+    line-height: 0.88rem;
     display: inline-block;
 }
 .regionListContainer li>span{
@@ -1143,23 +1142,24 @@ marquee{
     width: 100%;
     position: absolute;
     left: 0;
+    max-width: 640px;
     height: 5.30rem;
-    z-index: 51;
+    z-index: 100;
     display: none;
 }
-.ShareListContainer>span{
-    width: 1.00rem;
+.ShareListContainer>a{
+    width: 1.10rem;
     height: 1.50rem;
     display: inline-block;
-    margin: 0.20rem 0.70rem;
+    margin: 0.20rem 0.66rem;
     color: #ffffff;
     font-size: 0.20rem;
     text-align: center;
 }
-.ShareListContainer>span>img{
+.ShareListContainer>a>img{
     width: 1.00rem;
 }
-.ShareListContainer>span>p{
+.ShareListContainer>a>p{
     margin-top: 0.20rem;
 }
 .ShareListContainer>div{
@@ -1167,36 +1167,36 @@ marquee{
     height: 0.66rem;
     margin: 0 auto;
     color: #ffffff;
-    border: 2px solid #ffffff;
+    border: 0.02rem solid #ffffff;
     text-align: center;
     line-height: 0.66rem;
     margin-top: 0.86rem;
 }
 
 #addSkuFoodType{
-    line-height: 0.40rem;
+    line-height: 0.45rem;
     color: darkgrey;
     font-size: 0.22rem;
 }
 #newShoppingItemSpan{
     display: block;
-    height: 0.70rem;
+    height: 0.55rem;
     line-height: 0.70rem;
 }
-=======
+.shangjia{
+    height: 12.0rem;
+    overflow: hidden;
+}
 
-
-
-
-
-
-
-
->>>>>>> 81e4d7ad427b5703767c90862a0d80ace6a01ae4
-
-
-
-
+#contrast{
+    border-bottom: 0.01rem solid #d7d7d7;
+}
+.peisong{
+    border-bottom: 0.01rem solid #d7d7d7;
+}
+.serverSettingItem .del-bottom-style{
+    border-bottom:0;
+}
 
 
 

@@ -26,10 +26,7 @@
         $('.TimeSwitchContext').eq(index).css('display','block').siblings('.TimeSwitchContext').css('display','none');
     });
 
-    $('.timeHeaderBackPic, .timeHeaderBackMessage').on('click',function () {
-        window.history.go(-1);
+    $('.TimeContentTitle').on('click',function () {
+        window.history.back();
     })
-
-
-
 })();

@@ -13,11 +13,14 @@ body{
     position: relative;
     text-align: center;
 }
-.loadingClose{
+#loadingClose{
     position: absolute;
     width: 0.64rem;
     left: -0.17rem;
     top: .18rem;
+}
+#loadingClose>img{
+    width: 0.64rem;
 }
 .loadingHeader b{
     font-size: 0.34rem;

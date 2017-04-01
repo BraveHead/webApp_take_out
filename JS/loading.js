@@ -14,7 +14,6 @@
     function tabChange() {
         $('.contactTab>span').on('click',function () {
             let index = $('.contactTab>span').index(this);
-            console.log(index);
             $('.contactTab>span').eq(index).addClass('collectTabShow').siblings().removeClass('collectTabShow');
             $('.forgetTab').eq(index).addClass("show").siblings(".forgetTab").removeClass('show');
         });

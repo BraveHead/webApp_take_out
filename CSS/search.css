@@ -15,7 +15,7 @@
 .hot_search_container_input{
     width: 9.6rem;
     height: 0.88rem;
-    margin-top: 0.14rem;
+    margin-top: 0.16rem;
 }
 .hot_search_container_input .lable{
     background-color: rgb(234,234,234);
@@ -24,11 +24,12 @@
     float: left;
     margin-left:0.3rem;
     position: relative;
+    border-radius: 0.05rem;
 }
 .hot_search_pic{
     width: 0.3rem;
     vertical-align:middle;
-    margin-top: 0.15rem;
+    margin-top: 0.16rem;
     margin-left: 0.32rem;
 }
 .hot_search_input{
@@ -36,7 +37,7 @@
     background-color: rgb(234,234,234);
     vertical-align:middle;
     font-size: 0.28rem;
-    margin-top: 0.15rem;
+    margin-top: 0.16rem;
     width:5.26rem;
     outline: 0;
 }
@@ -48,6 +49,7 @@
     text-align: right;
     line-height: 0.6rem;
     font-weight: bolder;
+    color: #3c3c3c;
 }
 
 /*热门搜索*/
@@ -66,7 +68,6 @@
 .hot_search_content_pic span{
     vertical-align: middle;
     font-size:0.28rem;
-    font-weight: bolder;
 }
 .hot_search_content_type{
     width: 100%;
@@ -83,14 +84,14 @@
     text-align: center;
     line-height: 0.48rem;
     color: rgb(92,92,92);
-    border:1px solid rgb(178,178,178);
+    border:0.01rem solid #d7d7d7;
     border-radius: 0.08rem;
 }
 
 /*历史搜索*/
 .history_search_content{
     width: 6.9rem;
-    margin-top: 1.0rem;
+    margin-top: 0.60rem;
 }
 .history_search_content_type{
     width: 100%;
@@ -118,6 +119,7 @@
     width: 0.32rem;
     top:-0.16rem;
     right: -0.16rem;
+    display: none;
 }
 .clear_both_pic{
     width: 0.28rem;
